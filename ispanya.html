@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#091427">
+  <title>İspanya Gezi Rehberi</title>
+  <style>
+    :root{--bg:#091427;--panel:#11233f;--panel2:#172b4b;--text:#edf5ff;--muted:#bdd1ea;--line:rgba(255,255,255,.12);--gold:#f4b942;--gold-soft:#f7d780;--green:#43b88d;--blue:#7dc1ff;--shadow:rgba(7,14,24,.38)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(180deg,#07111b 0%,#0d1d30 100%);color:var(--text)}a{color:inherit}
+    .page{max-width:1180px;margin:0 auto;padding:34px 18px 72px}.hero{display:grid;grid-template-columns:1.5fr .9fr;gap:22px;padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(90deg,rgba(9,20,39,.96) 0%,rgba(9,20,39,.84) 58%,rgba(9,20,39,.3) 100%),url("https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=1500&q=80") center/cover;box-shadow:0 24px 56px var(--shadow);min-height:400px}
+    .crumb,.chip,.tag{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.05);color:var(--gold-soft);font-size:.82rem}
+    h1{margin:16px 0 10px;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.04em}.lead{margin:0;max-width:760px;color:var(--muted);font-size:1.04rem;line-height:1.7}.chips,.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:700;transition:transform .2s ease,filter .2s ease}.btn:hover,.place:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.primary{background:linear-gradient(135deg,var(--gold),#d79c2f);color:#101827;border-color:transparent}.btn.secondary{background:rgba(255,255,255,.06)}
+    .hero-panel{display:grid;gap:14px;align-content:center}.stat-card{padding:18px;border:1px solid var(--line);border-radius:20px;background:rgba(9,15,25,.78);backdrop-filter:blur(10px)}.stat-card h2{margin:0 0 12px;font-size:1.05rem}.stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.stat{padding:12px;border-radius:14px;background:rgba(255,255,255,.05)}.stat span,.stat strong{display:block}.stat span{font-size:.78rem;color:var(--muted)}.stat strong{margin-top:4px;font-size:.98rem}
+    .section{margin-top:30px;padding:22px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(17,35,63,.94),rgba(10,22,39,.94));box-shadow:0 18px 42px rgba(0,0,0,.18)}.section-head{margin-bottom:16px;color:var(--gold-soft);font-size:.82rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.overview-grid,.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.feature-card,.spot-card{min-height:145px;padding:19px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025))}.badge,.tag{padding:5px 10px;color:var(--gold-soft);font-size:.72rem}.feature-card h3,.spot-card h3{margin:10px 0 7px}.feature-card p,.spot-card p{margin:0;color:var(--muted);line-height:1.6;font-size:.92rem}
+    .country-map{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.map-box{min-height:340px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#10213a}.map-box iframe{width:100%;height:100%;min-height:340px;border:0}.map-list{display:grid;gap:10px;align-content:start}.mini-item{display:flex;gap:12px;padding:14px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.035)}.dot{width:10px;height:10px;margin-top:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(244,185,66,.12);flex:none}.mini-item strong,.mini-item span{display:block}.mini-item span{margin-top:3px;color:var(--muted);font-size:.85rem}
+    .city-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.city-nav a{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:var(--muted);font-size:.86rem}.city-nav a:hover{background:var(--gold);color:#101827}
+    .city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}.city-card{scroll-margin-top:16px;overflow:hidden;border:1px solid var(--line);border-radius:19px;background:linear-gradient(160deg,rgba(255,255,255,.065),rgba(255,255,255,.02));transition:transform .2s ease,border-color .2s ease}.city-card:hover{transform:translateY(-3px);border-color:rgba(244,185,66,.45)}.city-card-head{padding:18px 18px 0}.city-title{display:flex;align-items:flex-start;gap:12px}.city-title .flag{font-size:1.6rem}.city-title h3{margin:0 0 4px;font-size:1.2rem}.city-title p{margin:0;color:var(--muted);line-height:1.5;font-size:.9rem}.city-card .badge{margin-top:12px;display:inline-flex;border:1px solid var(--line);border-radius:999px}.places{display:grid;gap:8px;padding:14px 18px 18px}.place{display:block;padding:11px 12px;border:1px solid rgba(255,255,255,.08);border-radius:13px;background:rgba(255,255,255,.035);text-decoration:none;transition:transform .18s ease,background .18s ease}.place strong,.place span{display:block}.place strong{font-size:.9rem}.place span{margin-top:4px;color:var(--muted);font-size:.82rem;line-height:1.45}.meta-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 18px 16px;color:var(--muted);font-size:.78rem}.meta-row a{color:var(--blue);text-decoration:none;font-weight:700}
+    .footer-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.footer-links .back{padding:12px 18px;border-radius:12px;background:var(--gold);color:#172033;font-weight:800;text-decoration:none}.footer-links .back.alt{background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--text)}
+    @media(max-width:820px){.hero,.country-map{grid-template-columns:1fr}.hero{padding:22px;min-height:0}.page{padding:20px 14px 52px}.hero-panel{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.section{padding:17px}.map-box,.map-box iframe{min-height:280px}}
+    @media(max-width:480px){.city-grid{grid-template-columns:1fr}.stat-grid{gap:8px}.hero-actions .btn{flex:1}.hero{background-position:58% center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <div class="crumb">🇪🇸 Avrupa → İspanya</div>
+        <h1>İspanya Gezi Rehberi</h1>
+        <p class="lead">Madrid’in müzeleri, Barselona’nın Gaudí mimarisi, Endülüs’ün sarayları ve kuzey kıyılarının yeşil manzaralarıyla İspanya; tarih, şehir yaşamı ve doğayı bir arada sunuyor.</p>
+        <div class="chips"><span class="chip">Madrid</span><span class="chip">Barselona</span><span class="chip">Sevilla</span><span class="chip">Granada</span><span class="chip">Valencia</span><span class="chip">Endülüs</span></div>
+        <div class="hero-actions"><a class="btn primary" href="#cities">Şehirleri keşfet</a><a class="btn secondary" href="avrupa.html">Avrupa rehberine dön</a></div>
+      </div>
+      <div class="hero-panel">
+        <div class="stat-card"><h2>İspanya Özeti</h2><div class="stat-grid"><div class="stat"><span>Şehir</span><strong>16 durak</strong></div><div class="stat"><span>İklim</span><strong>Akdeniz + Atlantik</strong></div><div class="stat"><span>Kültür</span><strong>Roma • Endülüs • Gaudí</strong></div><div class="stat"><span>Öne çıkan</span><strong>Madrid • Barselona</strong></div></div></div>
+        <div class="stat-card"><h2>Rota önerisi</h2><div class="stat-grid"><div class="stat"><span>Madrid</span><strong>2–3 gün</strong></div><div class="stat"><span>Barselona</span><strong>2–3 gün</strong></div><div class="stat"><span>Sevilla + Córdoba</span><strong>2–3 gün</strong></div><div class="stat"><span>Granada</span><strong>1–2 gün</strong></div></div></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-head">İspanya'nın ruhu</div>
+      <div class="overview-grid">
+        <article class="feature-card"><span class="badge">Tarih</span><h3>Katmanlı miras</h3><p>Roma kalıntıları, Orta Çağ kentleri ve Endülüs dönemi yapıları ülkenin farklı bölgelerinde bir arada.</p></article>
+        <article class="feature-card"><span class="badge">Sanat</span><h3>Gaudí'den Prado'ya</h3><p>Barselona'nın modernist mimarisi ile Madrid'in dünya çapındaki sanat koleksiyonları güçlü bir kültür rotası oluşturur.</p></article>
+        <article class="feature-card"><span class="badge">Doğa</span><h3>İki kıyı, çok rota</h3><p>Akdeniz sahilleri, Balear adaları, kuzeyin yeşil kıyıları ve Sierra Nevada farklı seyahat deneyimleri sunar.</p></article>
+        <article class="feature-card"><span class="badge">Lezzet</span><h3>Bölgesel mutfaklar</h3><p>Tapas, paella, pintxos ve Endülüs lezzetleri şehirden şehre değişen bir keşif imkânı verir.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="harita">
+      <div class="section-head">Harita: İspanya → şehirler → turistik noktalar</div>
+      <div class="country-map">
+        <div class="map-box"><iframe title="İspanya haritası" src="https://www.openstreetmap.org/export/embed.html?bbox=-9.5%2C35.5%2C4.5%2C44.2&amp;layer=mapnik" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <div class="map-list">
+          <div class="mini-item"><span class="dot"></span><div><strong>Madrid</strong><span>Prado, Kraliyet Sarayı ve Retiro Parkı.</span></div></div>
+          <div class="mini-item"><span class="dot"></span><div><strong>Barselona</strong><span>Sagrada Família, Park Güell ve Gotik Mahalle.</span></div></div>
+          <div class="mini-item"><span class="dot"></span><div><strong>Endülüs</strong><span>Sevilla, Córdoba ve Granada'nın tarihî mirası.</span></div></div>
+          <div class="mini-item"><span class="dot"></span><div><strong>Kuzey ve adalar</strong><span>Bilbao, Santiago, Mallorca ve Atlantik kıyıları.</span></div></div>
+          <a class="btn primary" href="../index.html">Ana haritada İspanya pinlerini aç →</a>
+        </div>
+      </div>
+    </section>
+    <nav class="city-nav" id="cities" aria-label="İspanya şehirleri"></nav>
+    <section class="section"><div class="section-head">Şehirler ve öne çıkan yerler</div><div class="city-grid" id="cityGrid"></div></section>
+    <section class="section"><div class="section-head">Öne çıkan güzergahlar</div><div class="featured-grid">
+      <article class="spot-card"><span class="tag">Sanat</span><h3>Madrid + Toledo</h3><p>Başkent müzelerini ve Castilla-La Mancha'nın tarihî kent dokusunu bir araya getir.</p></article>
+      <article class="spot-card"><span class="tag">Endülüs</span><h3>Sevilla + Córdoba + Granada</h3><p>Saraylar, katedraller ve eski kent mahalleleriyle dolu kültür rotası.</p></article>
+      <article class="spot-card"><span class="tag">Kıyı</span><h3>Valencia + Mallorca</h3><p>Akdeniz mimarisi, plajlar ve ada manzaralarıyla daha yavaş bir gezi.</p></article>
+      <article class="spot-card"><span class="tag">Kuzey</span><h3>Bilbao + San Sebastián</h3><p>Müzeler, pintxos kültürü ve yemyeşil Atlantik kıyıları.</p></article>
+    </div></section>
+    <div class="footer-links"><a class="back" href="avrupa.html">← Avrupa rehberine dön</a><a class="back alt" href="../index.html">Ana haritaya dön</a></div>
+  </main>
+  <script>
+    const cities=[
+      {name:'Madrid',slug:'madrid',region:'Madrid Özerk Topluluğu',lat:40.4168,lng:-3.7038,intro:'Sanat müzeleri, geniş bulvarları ve canlı meydanlarıyla ülkenin başkenti.',places:[
+        ['Prado Müzesi','İspanyol ve Avrupa sanatının en önemli koleksiyonlarından biri.','prado-muzesi',40.4138,-3.6921],
+        ['Kraliyet Sarayı','İspanya kraliyet tarihini yansıtan görkemli saray kompleksi.','kraliyet-sarayi-madrid',40.4179,-3.7143],
+        ['Plaza Mayor','Kemerli cepheleriyle Madrid’in tarihî merkezindeki ana meydan.','plaza-mayor-madrid',40.4155,-3.7074],
+        ['Retiro Parkı','Kristal Saray ve gölet çevresindeki geniş kent parkı.','retiro-parki',40.4153,-3.6845],
+        ['Puerta del Sol','Şehrin simgesel buluşma noktası ve İspanya’nın kilometre başlangıç işareti.','puerta-del-sol',40.4169,-3.7035]
+      ]},
+      {name:'Barselona',slug:'barselona',region:'Katalonya',lat:41.3851,lng:2.1734,intro:'Gaudí eserleri, Akdeniz kıyısı ve tarihî mahalleleriyle Katalonya’nın başkenti.',places:[
+        ['Sagrada Família','Antoni Gaudí’nin hâlâ tamamlanmakta olan, şehrin simgesel bazilikası.','sagrada-familia',41.4036,2.1744],
+        ['Park Güell','Gaudí’nin renkli mozaikleri ve şehir manzaralarıyla ünlü parkı.','park-guell',41.4145,2.1527],
+        ['Casa Batlló','Passeig de Gràcia üzerindeki organik modernist konut yapısı.','casa-batllo',41.3917,2.1649],
+        ['Barselona Gotik Mahallesi','Roma ve Orta Çağ izlerini koruyan dar sokaklı eski şehir.','gotik-mahalle-barselona',41.3839,2.1762],
+        ['Montjuïc Kalesi','Liman ve kent manzaralarına bakan tarihî tepe kalesi.','montjuic-kalesi',41.3635,2.1651]
+      ]},
+      {name:'Sevilla',slug:'sevilla',region:'Endülüs',lat:37.3891,lng:-5.9845,intro:'Endülüs mimarisi, portakal ağaçlı sokakları ve flamenko kültürüyle tanınır.',places:[
+        ['Sevilla Katedrali ve Giralda','Dünyanın en büyük gotik katedrallerinden biri ve eski minareden dönüştürülen çan kulesi.','sevilla-katedrali-giralda',37.3861,-5.9925],
+        ['Real Alcázar','Mudejar sarayları ve bahçeleriyle UNESCO Dünya Mirası kompleksi.','real-alcazar-sevilla',37.3831,-5.9902],
+        ['Plaza de España','1929 sergisi için inşa edilmiş, kanallı yarım daire meydan.','plaza-de-espana-sevilla',37.3772,-5.9869],
+        ['Metropol Parasol','Eski şehirde ahşap strüktürü ve seyir terasıyla çağdaş kent simgesi.','metropol-parasol',37.3934,-5.9918]
+      ]},
+      {name:'Valencia',slug:'valencia',region:'Valensiya Özerk Topluluğu',lat:39.4699,lng:-0.3763,intro:'Tarihî merkez, sahil ve modern mimariyi Akdeniz kıyısında buluşturur.',places:[
+        ['Sanat ve Bilim Şehri','Santiago Calatrava tasarımı çağdaş kültür ve bilim kompleksi.','sanat-bilim-sehri',39.454,-0.3505],
+        ['Valencia Katedrali','Gotik, Romanesk ve Barok unsurları bir araya getiren tarihî katedral.','valencia-katedrali',39.4753,-0.3757],
+        ['Merkez Pazarı','Modernist mimarili kapalı pazarda yerel ürünler ve günlük yaşam.','valencia-merkez-pazari',39.4708,-0.3789],
+        ['Turia Bahçeleri','Eski nehir yatağında uzanan, kenti boydan boya geçen büyük park.','turia-bahceleri',39.469,-0.366]
+      ]},
+      {name:'Granada',slug:'granada',region:'Endülüs',lat:37.1773,lng:-3.5986,intro:'Sierra Nevada eteklerinde, Nasri sarayları ve Albaicín mahallesiyle öne çıkar.',places:[
+        ['Elhamra (Alhambra)','Nasri sarayları, avluları ve surlarıyla UNESCO Dünya Mirası kompleksi.','elhamra',37.1761,-3.5881],
+        ['Generalife Bahçeleri','Elhamra’nın yazlık sarayını çevreleyen tarihî bahçe düzeni.','generalife',37.1772,-3.5838],
+        ['Albaicín','Dar sokakları ve Elhamra manzaralı miradorlarıyla eski Arap mahallesi.','albaicin',37.1814,-3.5926]
+      ]},
+      {name:'Córdoba',slug:'cordoba',region:'Endülüs',lat:37.8882,lng:-4.7794,intro:'Roma ve Endülüs mirasını beyaz avlulu sokaklarında yaşatan tarihî kent.',places:[
+        ['Córdoba Camii-Katedrali','Sütun ormanı ve katedral bölümünü bir arada barındıran eşsiz yapı.','cordoba-camii-katedrali',37.8791,-4.7794],
+        ['Córdoba Yahudi Mahallesi','Çiçekli avluları, sinagogu ve dar sokaklarıyla eski kent bölgesi.','cordoba-yahudi-mahallesi',37.8798,-4.7815]
+      ]},
+      {name:'Toledo',slug:'toledo',region:'Castilla-La Mancha',lat:39.8628,lng:-4.0273,intro:'Hristiyan, Müslüman ve Yahudi mirasının iç içe geçtiği sur içi şehir.',places:[
+        ['Toledo Katedrali','İspanyol gotik mimarisinin en önemli katedrallerinden biri.','toledo-katedrali',39.8579,-4.0231],
+        ['Toledo Eski Şehri','Tagus kıvrımı üzerindeki UNESCO korumalı tarihî merkez.','toledo-eski-sehir',39.8568,-4.0245]
+      ]},
+      {name:'Málaga',slug:'malaga',region:'Endülüs',lat:36.7213,lng:-4.4214,intro:'Akdeniz limanı, Alcazaba’sı ve Picasso mirasıyla canlı bir sahil şehri.',places:[
+        ['Alcazaba de Málaga','Roma tiyatrosunun üzerindeki Endülüs dönemi kale-saray kompleksi.','alcazaba-malaga',36.7213,-4.4154],
+        ['Gibralfaro Kalesi','Liman ve şehir manzaralı tepede yer alan tarihî kale.','gibralfaro-kalesi',36.7239,-4.4102],
+        ['Picasso Müzesi Málaga','Pablo Picasso’nun doğduğu şehirdeki kapsamlı sanat koleksiyonu.','picasso-muzesi-malaga',36.7212,-4.4204]
+      ]},
+      {name:'Bilbao',slug:'bilbao',region:'Bask Bölgesi',lat:43.263,lng:-2.935,intro:'Guggenheim’dan eski liman mahallelerine uzanan yaratıcı Bask şehri.',places:[
+        ['Guggenheim Bilbao','Titanyum kaplı çağdaş sanat müzesi ve Frank Gehry tasarımı.','guggenheim-bilbao',43.2687,-2.934],
+        ['Casco Viejo','Yedi sokaklı tarihî merkez, pazarlar ve nehir kıyısı.','casco-viejo-bilbao',43.2577,-2.9237]
+      ]},
+      {name:'San Sebastián',slug:'san-sebastian',region:'Bask Bölgesi',lat:43.3183,lng:-1.9812,intro:'La Concha koyu, sahil yürüyüşleri ve pintxos kültürüyle tanınır.',places:[
+        ['La Concha Plajı','Şehir merkezindeki kavisli koy ve sahil promenadı.','la-concha-plaji',43.3174,-1.9917],
+        ['Parte Vieja','Pintxos barları ve tarihî meydanlarıyla eski kent mahallesi.','parte-vieja-san-sebastian',43.3234,-1.9844]
+      ]},
+      {name:'Zaragoza',slug:'zaragoza',region:'Aragon',lat:41.6488,lng:-0.8891,intro:'Ebro kıyısındaki Aragon başkenti, bazilikası ve saraylarıyla dikkat çeker.',places:[
+        ['El Pilar Bazilikası','Ebro kıyısındaki geniş meydanı süsleyen barok bazilika.','el-pilar-bazilikasi',41.6561,-0.8785],
+        ['Aljafería Sarayı','Aragon’daki İslam dönemi saray mimarisinin önemli örneği.','aljaferia-sarayi',41.6567,-0.8967]
+      ]},
+      {name:'Santiago de Compostela',slug:'santiago-de-compostela',region:'Galicia',lat:42.8782,lng:-8.5448,intro:'Camino de Santiago hac yolunun tarihî bitiş noktası ve Galicia’nın başkenti.',places:[
+        ['Santiago Katedrali','Hac rotasının sonundaki Romanesk-Barok katedral ve meydan.','santiago-katedrali',42.8806,-8.5456],
+        ['Santiago Eski Şehri','Taş sokakları ve kemerli meydanlarıyla UNESCO korumalı merkez.','santiago-eski-sehir',42.8797,-8.5448]
+      ]},
+      {name:'Salamanca',slug:'salamanca',region:'Castilla y León',lat:40.9701,lng:-5.6635,intro:'Altın renkli taş mimarisi ve köklü üniversitesiyle tarihî bir Castile şehri.',places:[
+        ['Plaza Mayor Salamanca','Barok cepheli, kemerli ve canlı ana meydan.','plaza-mayor-salamanca',40.9651,-5.6639],
+        ['Salamanca Üniversitesi','Avlusu ve Plateresk cephesiyle Avrupa’nın eski üniversitelerinden biri.','salamanca-universitesi',40.9609,-5.6673]
+      ]},
+      {name:'Girona',slug:'girona',region:'Katalonya',lat:41.9794,lng:2.8214,intro:'Onyar Nehri, Orta Çağ surları ve iyi korunmuş eski kentiyle Katalonya durağı.',places:[
+        ['Girona Katedrali','Geniş basamakları ve tek nefli gotik iç mekânıyla şehrin simgesi.','girona-katedrali',41.987,-2.8249],
+        ['Girona Eski Şehri','Renkli Onyar evleri, Yahudi mahallesi ve tarihî surlar.','girona-eski-sehir',41.984,-2.824]
+      ]},
+      {name:'Palma de Mallorca',slug:'palma-de-mallorca',region:'Balear Adaları',lat:39.5696,lng:2.6502,intro:'Mallorca’nın başkenti; gotik katedral, liman ve ada koylarına açılan kapı.',places:[
+        ['La Seu Katedrali','Palma Körfezi kıyısındaki görkemli gotik katedral.','la-seu-katedrali',39.5676,2.6482],
+        ['Bellver Kalesi','Yuvarlak planlı tarihî kale ve körfeze bakan seyir noktası.','bellver-kalesi',39.563,-2.6192]
+      ]},
+      {name:'Cádiz',slug:'cadiz',region:'Endülüs',lat:36.5271,lng:-6.2886,intro:'Atlantik’e uzanan yarımadada, surları ve deniz manzaralarıyla eski liman kenti.',places:[
+        ['Cádiz Katedrali','Altın kubbesiyle deniz kıyısındaki barok-neoklasik katedral.','cadiz-katedrali',36.5297,-6.2918],
+        ['La Caleta Plajı','Eski şehir surları arasındaki küçük şehir plajı ve gün batımı noktası.','la-caleta-plaji',36.5295,-6.3082]
+      ]}
+    ];
+    const cityGrid=document.querySelector('#cityGrid'),cityNav=document.querySelector('#cities');
+    const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+    cities.forEach(city=>{
+      const id='city-'+city.slug;
+      cityNav.insertAdjacentHTML('beforeend',`<a href="#${id}">${escapeHtml(city.name)}</a>`);
+      const list=city.places.map(place=>`<a class="place" href="../index.html#/ispanya/${city.slug}/${place[2]}"><strong>${escapeHtml(place[0])}</strong><span>${escapeHtml(place[1])}</span></a>`).join('');
+      const count=city.places.length;
+      cityGrid.insertAdjacentHTML('beforeend',`<article class="city-card" id="${id}"><div class="city-card-head"><div class="city-title"><span class="flag">🇪🇸</span><div><h3>${escapeHtml(city.name)}</h3><p>${escapeHtml(city.intro)}</p></div></div><span class="badge">${escapeHtml(city.region)} · ${count} öne çıkan yer</span></div><div class="places">${list}</div><div class="meta-row"><span>${city.lat.toFixed(4)}° N, ${Math.abs(city.lng).toFixed(4)}° ${city.lng<0?'W':'E'}</span><a href="#harita">Haritada göster ↑</a></div></article>`);
+    });
+  </script>
+</body>
+</html>

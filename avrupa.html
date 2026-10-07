@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avrupa Gezi Rehberi</title>
+  <style>
+    :root{--bg:#091427;--panel:#10213a;--line:rgba(255,255,255,.14);--text:#eef6ff;--muted:#b6c7da;--accent:#f4b942}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(145deg,#07101f,#14294a);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    main{max-width:1100px;margin:auto;padding:44px 22px 72px}.hero{padding:34px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(244,185,66,.2),rgba(16,33,58,.92));box-shadow:0 24px 60px rgba(0,0,0,.24)}
+    h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;margin:0 0 16px}.lead{max-width:760px;color:var(--muted);margin:0}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.chip{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06)}
+    h2{margin:42px 0 14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{display:block;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--panel);text-decoration:none;transition:transform .2s ease,border-color .2s ease}.card:hover{transform:translateY(-3px);border-color:rgba(244,185,66,.55)}.flag{font-size:1.7rem}.card h3{margin:8px 0}.card p{color:var(--muted);margin:0}.card .open{display:inline-block;margin-top:16px;color:var(--accent);font-weight:800}.back{display:inline-block;margin-top:34px;padding:12px 18px;border-radius:12px;background:var(--accent);color:#172033;font-weight:800;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="flag">🇪🇺</div>
+      <h1>Avrupa Gezi Rehberi</h1>
+      <p class="lead">Tarih, sanat, mimari ve şehir yaşamını bir araya getiren Avrupa rotaları. Ana haritadaki duraklardan ülke ve şehir bazında keşfe başlayabilirsin.</p>
+      <div class="chips"><span class="chip">Paris</span><span class="chip">Roma</span><span class="chip">Barselona</span><span class="chip">Berlin</span><span class="chip">Londra</span></div>
+    </section>
+
+    <h2>Ülke gezi rehberleri</h2>
+    <p class="lead">Avrupa ülkelerinin gezi sayfalarına bu merkezden ulaş. Yeni Avrupa ülke rehberleri de aşağıdaki ülke listesine eklenir.</p>
+    <section class="grid" id="countryGuides" aria-label="Ülke gezi rehberleri"></section>
+
+    <a class="back" href="../index.html">← Ana haritaya dön</a>
+  </main>
+  <script>
+    const countryGuides=[
+      {flag:'🇮🇹',name:'İtalya',region:'Avrupa',description:'Roma’nın antik mirası, Rönesans kentleri ve Akdeniz kıyıları.',href:'italya.html'},
+      {flag:'🇪🇸',name:'İspanya',region:'Avrupa',description:'Gaudí mimarisi, Endülüs sarayları ve Atlantik-Akdeniz rotaları.',href:'ispanya.html'},
+      {flag:'🇷🇺',name:'Rusya',region:'Avrupa ve Asya',description:'Moskova, Sankt-Peterburg ve geniş coğrafyadaki kültür rotaları.',href:'../Asya/rusya.html'}
+    ];
+    document.querySelector('#countryGuides').innerHTML=countryGuides.map(country=>`
+      <a class="card" href="${country.href}">
+        <div class="flag" aria-hidden="true">${country.flag}</div>
+        <h3>${country.name} · ${country.region}</h3>
+        <p>${country.description}</p>
+        <span class="open">${country.name} rehberini aç →</span>
+      </a>`).join('');
+  </script>
+</body>
+</html>
