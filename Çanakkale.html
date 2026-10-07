@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -6,8 +6,8 @@
 <title>Çanakkale Gezi Rehberi | Troya, Gelibolu, Assos ve Adalar</title>
 <meta name="description" content="Çanakkale gezi rehberi: Troya Antik Kenti, Gelibolu Tarihi Alanı, Assos, Bozcaada, Gökçeada, kıyılar ve yöresel lezzetler.">
 <meta name="keywords" content="Çanakkale gezi rehberi, Troya, Gelibolu, Assos, Bozcaada, Gökçeada, gezilecek yerler, Ezine peyniri, sardalya">
-<link rel="stylesheet" href="./G%20projesi/ege-guide-layout.css">
-<link rel="stylesheet" href="./G%20projesi/city-guides-dark.css">
+<link rel="stylesheet" href="./ege-guide-layout.css">
+<link rel="stylesheet" href="./city-guides-dark.css">
 </head>
 <body>
 <header class="hero">
@@ -72,6 +72,6 @@
 </main>
 <footer>Çanakkale Gezi Rehberi · Feribot, müze ve korunan alan duyurularını yolculuk öncesinde kontrol edin.</footer>
 <script>(function(){var active="all",filters=document.getElementById("filters"),query=document.getElementById("q");function update(){var term=query.value.trim().toLocaleLowerCase("tr"),total=0;document.querySelectorAll("section.cat").forEach(function(section){var shown=0;section.querySelectorAll(".card").forEach(function(card){var text=(card.dataset.search||card.textContent).toLocaleLowerCase("tr"),visible=(active==="all"||active===section.dataset.cat)&&(!term||text.includes(term));card.style.display=visible?"":"none";if(visible)shown++});section.style.display=shown?"":"none";total+=shown});document.getElementById("empty").style.display=total?"none":"block"}filters.addEventListener("click",function(event){var link=event.target.closest("a[data-c]");if(!link)return;event.preventDefault();active=link.dataset.c;filters.querySelectorAll("a").forEach(function(item){item.classList.toggle("active",item===link)});update()});query.addEventListener("input",update)})();</script>
-<script defer src="./G%20projesi/city-video-slots.js"></script>
+<script defer src="./city-video-slots.js"></script>
 </body>
 </html>

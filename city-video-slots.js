@@ -121,7 +121,7 @@
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';
-    stylesheet.href = './G%20projesi/city-video-slots.css';
+    stylesheet.href = './city-video-slots.css';
     document.head.appendChild(stylesheet);
 
     function getYouTubeEmbedUrl(value) {
