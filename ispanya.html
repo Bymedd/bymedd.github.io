@@ -57,7 +57,7 @@
           <div class="mini-item"><span class="dot"></span><div><strong>Barselona</strong><span>Sagrada Família, Park Güell ve Gotik Mahalle.</span></div></div>
           <div class="mini-item"><span class="dot"></span><div><strong>Endülüs</strong><span>Sevilla, Córdoba ve Granada'nın tarihî mirası.</span></div></div>
           <div class="mini-item"><span class="dot"></span><div><strong>Kuzey ve adalar</strong><span>Bilbao, Santiago, Mallorca ve Atlantik kıyıları.</span></div></div>
-          <a class="btn primary" href="../index.html">Ana haritada İspanya pinlerini aç →</a>
+          <a class="btn primary" href="index.html">Ana haritada İspanya pinlerini aç →</a>
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@
       <article class="spot-card"><span class="tag">Kıyı</span><h3>Valencia + Mallorca</h3><p>Akdeniz mimarisi, plajlar ve ada manzaralarıyla daha yavaş bir gezi.</p></article>
       <article class="spot-card"><span class="tag">Kuzey</span><h3>Bilbao + San Sebastián</h3><p>Müzeler, pintxos kültürü ve yemyeşil Atlantik kıyıları.</p></article>
     </div></section>
-    <div class="footer-links"><a class="back" href="avrupa.html">← Avrupa rehberine dön</a><a class="back alt" href="../index.html">Ana haritaya dön</a></div>
+    <div class="footer-links"><a class="back" href="avrupa.html">← Avrupa rehberine dön</a><a class="back alt" href="index.html">Ana haritaya dön</a></div>
   </main>
   <script>
     const cities=[
@@ -155,7 +155,7 @@
     cities.forEach(city=>{
       const id='city-'+city.slug;
       cityNav.insertAdjacentHTML('beforeend',`<a href="#${id}">${escapeHtml(city.name)}</a>`);
-      const list=city.places.map(place=>`<a class="place" href="../index.html#/ispanya/${city.slug}/${place[2]}"><strong>${escapeHtml(place[0])}</strong><span>${escapeHtml(place[1])}</span></a>`).join('');
+      const list=city.places.map(place=>`<a class="place" href="index.html#/ispanya/${city.slug}/${place[2]}"><strong>${escapeHtml(place[0])}</strong><span>${escapeHtml(place[1])}</span></a>`).join('');
       const count=city.places.length;
       cityGrid.insertAdjacentHTML('beforeend',`<article class="city-card" id="${id}"><div class="city-card-head"><div class="city-title"><span class="flag">🇪🇸</span><div><h3>${escapeHtml(city.name)}</h3><p>${escapeHtml(city.intro)}</p></div></div><span class="badge">${escapeHtml(city.region)} · ${count} öne çıkan yer</span></div><div class="places">${list}</div><div class="meta-row"><span>${city.lat.toFixed(4)}° N, ${Math.abs(city.lng).toFixed(4)}° ${city.lng<0?'W':'E'}</span><a href="#harita">Haritada göster ↑</a></div></article>`);
     });

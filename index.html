@@ -91,12 +91,12 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;displa
 <button id="tg" class="pn" aria-label="Liste">☰</button>
 <aside id="side" class="pn">
  <h1>🌍 Gezi Rehberi</h1><div class="sub">Dünyayı çevir, yakınlaştıkça keşfet</div>
-<a class="turkey-side-link" href="./G projesi/turkey.html" target="_blank" rel="noopener">
+<a class="turkey-side-link" href="./turkey.html" target="_blank" rel="noopener">
  <span class="flag" aria-hidden="true">🇹🇷</span>
  <span class="copy"><strong>Türkiye Tüm İller</strong><span>Türkiye gezilecek yerler sayfası</span></span>
  <span class="arrow" aria-hidden="true">→</span>
 </a>
-<a class="turkey-side-link" href="./Avrupa/avrupa.html" target="_blank" rel="noopener">
+<a class="turkey-side-link" href="./avrupa.html" target="_blank" rel="noopener">
  <span class="flag" aria-hidden="true">🇪🇺</span>
  <span class="copy"><strong>Avrupa Gezi Rehberi</strong><span>Avrupa ülkeleri, şehirleri ve gezi rotaları</span></span>
  <span class="arrow" aria-hidden="true">→</span>
@@ -112,8 +112,8 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;displa
 <div id="turkeyGuidePanel" class="pn hidden" aria-live="polite">
  <div class="turkey-guide-header"><span>🇹🇷 Türkiye rehberi</span><button id="turkeyGuideClose" class="close" aria-label="Kapat">×</button></div>
  <div class="turkey-guide-shell"><span class="turkey-dot" aria-hidden="true"></span><span class="turkey-text">Bu bölgede Türkiye gezi rehberi aktif.</span></div>
- <iframe class="turkey-guide-frame" title="Türkiye gezi rehberi" src="./G%20projesi/turkey.html" loading="lazy"></iframe>
- <div class="turkey-guide-actions"><a href="./G%20projesi/turkey.html" target="_blank" rel="noopener">Sayfada Aç</a><button id="turkeyGuideHide" type="button">Bu kez gizle</button></div>
+ <iframe class="turkey-guide-frame" title="Türkiye gezi rehberi" src="./turkey.html" loading="lazy"></iframe>
+ <div class="turkey-guide-actions"><a href="./turkey.html" target="_blank" rel="noopener">Sayfada Aç</a><button id="turkeyGuideHide" type="button">Bu kez gizle</button></div>
 </div>
 </div>
 <script>
@@ -711,7 +711,7 @@ function click(e){const it=near(e);if(!it)return;
    return;
   }
   sessionStorage.setItem(key,'open');
-  window.location.assign('./G%20projesi/turkey.html');
+  window.location.assign('./turkey.html');
   return;
  }
  /* Ülke seçimi → z=5.2 ile AUTO_TO_MAP(4.8) eşiğini aşar → otomatik haritaya geç */

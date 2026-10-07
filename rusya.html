@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rusya Gezi Rehberi</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121b2b;
+      --panel-2: #182338;
+      --text: #ecf2ff;
+      --muted: #b7c6dd;
+      --accent: #ef4444;
+      --accent-2: #fbbf24;
+      --line: rgba(255,255,255,0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(180deg, #08111b 0%, #101a2c 100%);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 22px 72px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(239,68,68,.15), rgba(251,191,36,.08), rgba(18,27,43,.9));
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(15,23,42,.28);
+    }
+    h1 {
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      margin: 0 0 14px;
+      line-height: 1.05;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.7;
+      margin: 0 0 18px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .stat-card {
+      background: rgba(9,15,26,.75);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+    .stat-card h2 { margin: 0 0 16px; font-size: 1.1rem; }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .stat {
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .stat strong { display: block; font-size: 1.2rem; margin-top: 6px; }
+    .section {
+      margin-top: 34px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(18,27,43,.68);
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      padding: 20px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .card .meta {
+      padding: 18px 18px 10px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent-2);
+    }
+    .card .body {
+      padding: 0 18px 18px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      color: #111827;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="chip">🇷🇺 Asya · Rusya</div>
+        <h1>Rusya Gezi Rehberi</h1>
+        <p class="lead">
+          Moskova, Sankt-Peterburg, Kazan ve Soçi gibi başlıca destinasyonlardan oluşan Rusya rehberi; tarihi yapılar,
+          büyük meydanlar, sanat ve doğa güzelliklerini tek bir yolculuk akışında birleştirir.
+        </p>
+        <div class="chips">
+          <span class="chip">Moskova</span>
+          <span class="chip">Sankt-Peterburg</span>
+          <span class="chip">Kazan</span>
+          <span class="chip">Soçi</span>
+          <span class="chip">Vladivostok</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <h2>Öne çıkan şehirler</h2>
+        <div class="stat-grid">
+          <div class="stat"><span>Başkent</span><strong>Moskova</strong></div>
+          <div class="stat"><span>Şehir</span><strong>St. Petersburg</strong></div>
+          <div class="stat"><span>Kültür</span><strong>Kazan</strong></div>
+          <div class="stat"><span>Doğa</span><strong>Soçi</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head">Öne çıkan duraklar</div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta">Moskova</div>
+          <div class="body">
+            <h3>Kremlin ve Kızıl Meydan</h3>
+            <p>Rusya'nın tarihî merkezi, imparatorluk mirası ve simgesel meydanlarıyla ziyaretçiyi ilk anda etkiler.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta">Sankt-Peterburg</div>
+          <div class="body">
+            <h3>Ermitaj ve Nevski Prospekt</h3>
+            <p>Sanat, mimari ve şehir hayatının birleştiği noktada yer alan en önemli destinasyonlardan biridir.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta">Kazan</div>
+          <div class="body">
+            <h3>Kazan Kremli</h3>
+            <p>Tatar kültürü, İslami ve Rus mimarisinin eşsiz bir arada görüldüğü tarihî merkez.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta">Soçi</div>
+          <div class="body">
+            <h3>Karadeniz kıyısı</h3>
+            <p>Doğa, plaj ve modern turizm alanlarının birleştiği doğu Akdeniz dokulu bir Rus tatili.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <a class="back" href="index.html">← Ana haritaya dön</a>
+  </div>
+</body>
+</html>

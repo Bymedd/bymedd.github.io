@@ -25,13 +25,13 @@
     <p class="lead">Avrupa ülkelerinin gezi sayfalarına bu merkezden ulaş. Yeni Avrupa ülke rehberleri de aşağıdaki ülke listesine eklenir.</p>
     <section class="grid" id="countryGuides" aria-label="Ülke gezi rehberleri"></section>
 
-    <a class="back" href="../index.html">← Ana haritaya dön</a>
+    <a class="back" href="index.html">← Ana haritaya dön</a>
   </main>
   <script>
     const countryGuides=[
       {flag:'🇮🇹',name:'İtalya',region:'Avrupa',description:'Roma’nın antik mirası, Rönesans kentleri ve Akdeniz kıyıları.',href:'italya.html'},
       {flag:'🇪🇸',name:'İspanya',region:'Avrupa',description:'Gaudí mimarisi, Endülüs sarayları ve Atlantik-Akdeniz rotaları.',href:'ispanya.html'},
-      {flag:'🇷🇺',name:'Rusya',region:'Avrupa ve Asya',description:'Moskova, Sankt-Peterburg ve geniş coğrafyadaki kültür rotaları.',href:'../Asya/rusya.html'}
+      {flag:'🇷🇺',name:'Rusya',region:'Avrupa ve Asya',description:'Moskova, Sankt-Peterburg ve geniş coğrafyadaki kültür rotaları.',href:'rusya.html'}
     ];
     document.querySelector('#countryGuides').innerHTML=countryGuides.map(country=>`
       <a class="card" href="${country.href}">
