@@ -31,7 +31,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;displa
 .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;font-size:17px}
 .it b{display:block;font-size:13px}.it small{color:var(--mut);font-size:11px}.it .tx{flex:1;min-width:0}
 .hr{color:var(--ac);font-size:13px}
-.sidebar-ad{display:flex;align-items:center;justify-content:center;gap:8px;flex:none;width:min(300px,calc(100% - 24px));min-height:50px;margin:8px auto;padding:8px 12px;border:1px solid var(--bd);border-radius:12px;background:var(--chip);color:var(--mut);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.sidebar-ad{display:flex;align-items:center;justify-content:center;gap:8px;flex:none;width:min(300px,calc(100% - 24px));height:50px;margin:8px auto;padding:8px 12px;border:1px dashed var(--bd);border-radius:12px;background:var(--chip);color:var(--mut);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
 .sidebar-ad small{opacity:.75}
 #foot{padding:8px 14px;color:var(--mut);font-size:11px;border-top:1px solid var(--bd)}
 #sheet{right:12px;top:12px;width:330px;max-height:calc(100% - 100px);overflow-y:auto;display:none;padding:16px;z-index:3}
@@ -87,6 +87,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;displa
  #hud{bottom:auto;top:62px}
 }
 </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4470070668916024" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="app">
@@ -107,7 +108,7 @@ canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;displa
 </a>
 <input id="q" type="search" placeholder="Mekan, şehir veya etiket ara…" autocomplete="off">
 <div id="chips"></div><div id="list"></div>
-<div class="sidebar-ad" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 50</small></div>
+<aside class="sidebar-ad" aria-label="Reklam alanı"><span>Reklam alanı</span><small>300 × 50</small></aside>
 <div id="foot"></div>
 </aside>
 <section id="sheet" class="pn"><button id="x" aria-label="Kapat">×</button><div id="sc"></div></section>
