@@ -1,15 +1,70 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gümüşhane Gezi Rehberi | Karaca Mağarası, Tomara ve Yaylalar</title>
 <meta name="description" content="Gümüşhane gezi rehberi: Karaca Mağarası, Tomara Şelalesi, Santa Harabeleri, Limni Gölü ve yöresel pestil-köme.">
 <meta name="keywords" content="Gümüşhane gezi rehberi, Karaca Mağarası, Tomara Şelalesi, Santa Harabeleri, Limni Gölü, pestil köme">
-<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"></head>
+<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"><style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
 <body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
 <header class="hero"><h1>Gümüşhane Gezi Rehberi</h1><p>Karaca Mağarası'nın yer altı oluşumlarından Tomara Şelalesi'ne, yüksek rakımlı doğa ve tarih rotası.</p><div class="stats"><div class="stat"><b>5</b>Tarihî Yer</div><div class="stat"><b>2</b>Müze</div><div class="stat"><b>5</b>Doğa</div><div class="stat"><b>3</b>Göl &amp; şelale</div><div class="stat"><b>5</b>Lezzet</div></div></header>
 <nav class="top"><div class="navin"><span class="brand">GÜMÜŞHANE REHBERİ</span><input id="q" type="search" placeholder="Yer, ilçe veya lezzet ara..."></div></nav>
 <div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">🌊 Göller</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div>
-<main><div id="content">
+<main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Gümüşhane'yi videolarla keşfedin</h2><p class="lead">Mağara, şelale ve yayla rotaları üzerine içerikler.</p><div class="grid"><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Karaca Mağarası ve Tomara</h3><p>Yer altı ve şelale keşif rotaları.</p><a class="map" href="https://www.youtube.com/results?search_query=Gümüşhane+Karaca+Mağarası+Tomara+Şelalesi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Santa Harabeleri ve pestil</h3><p>Tarihî yayla yerleşimleri ve yöresel mutfak.</p><a class="map" href="https://www.youtube.com/results?search_query=Gümüşhane+Santa+Harabeleri+gezi+pestil" target="_blank" rel="noopener">YouTube'da ara →</a></div></article></div></section>
 <section class="cat" id="tarihi" data-cat="tarihi"><h2>🏛️ Tarihî ve kültürel yerler</h2><p class="lead">Eski maden ve yayla yerleşimlerinin izini sürün.</p><div class="grid">
 <article class="card" data-search="santa harabeleri dumanlı köyü rum evleri"><div class="band c-tarihi"></div><div class="cbody"><h3>Santa Harabeleri</h3><div class="meta"><span class="tag dist">Dumanlı</span><span class="tag">Tarihî yerleşim</span></div><p>Dağlık alana yayılmış eski yerleşim yapılarında koruma ve erişim kurallarına uyun.</p><div class="tip">Ulaşım ve yol durumunu, özellikle yağışlı mevsimde, önceden kontrol edin.</div><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Harabeleri+Gümüşhane" target="_blank" rel="noopener">Haritada aç →</a></div></article>
@@ -28,6 +83,7 @@
 <section class="cat" id="ilce" data-cat="ilce"><h2>🚗 İlçe gezileri ve günübirlik rotalar</h2><p class="lead">Mağara, şelale ve yayla duraklarını mesafelerine göre ayrı günlerde planlayın.</p><div class="grid"><article class="card" data-search="torul karaca mağarası limni gölü rota"><div class="band c-ilce"></div><div class="cbody"><h3>Torul: Karaca ve Limni</h3><div class="meta"><span class="tag dist">Tam gün</span></div><p>Mağara ve tabiat parkı ziyaretini yol, çalışma saatleri ve hava durumuna göre birleştirin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Torul+Gümüşhane" target="_blank" rel="noopener">Rotayı aç →</a></div></article><article class="card" data-search="şiran tomara şelalesi rota"><div class="band c-ilce"></div><div class="cbody"><h3>Şiran ve Tomara Şelalesi</h3><div class="meta"><span class="tag dist">Günübirlik</span></div><p>Şelale alanının erişim ve ziyaret koşullarını yola çıkmadan önce kontrol edin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Şiran+Gümüşhane" target="_blank" rel="noopener">Rotayı aç →</a></div></article></div></section>
 <section class="cat" id="lezzet" data-cat="lezzet"><h2>🍽️ Gümüşhane'nin yerel lezzetleri</h2><p class="lead">Dut pestili, köme ve yöresel hamur işlerini keşfedin.</p><div class="grid"><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Dut pestili ve köme</h3><div class="meta"><span class="tag dish">Yöresel ürün</span></div><p>Dut ve cevizle hazırlanan, kentin bilinen geleneksel ürünleri.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Siron</h3><div class="meta"><span class="tag dish">Yöresel yemek</span></div><p>Yufka parçaları, yoğurt ve tereyağıyla sunulan bölgesel yemek.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Kartol yahnisi</h3><div class="meta"><span class="tag dish">Yöresel yemek</span></div><p>Patates ve yöresel malzemelerle hazırlanan geleneksel tencere yemeği.</p></div></article></div></section>
 </div><div class="empty" id="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div><section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Yüksek rakım:</b> Hava ve yol şartları hızlı değişebilir; özellikle yaylalarda tahminleri kontrol edin.</li><li><b>Mağara:</b> Açık gün, saat ve erişim koşullarını teyit edin.</li><li><b>Doğa alanları:</b> Kamp, ateş ve giriş kuralları mevsime göre değişebilir.</li><li><b>Ulaşım:</b> İlçeler ve yayla yolları için sürüş süresini, gün ışığını ve yakıt planını dikkate alın.</li></ul></section></main>
-<footer>Gümüşhane Gezi Rehberi · Yol, hava ve korunan alan duyurularını kontrol edin.</footer>
+<footer>Gümüşhane Gezi Rehberi · Yol, hava ve korunan alan duyurularını kontrol edin.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",filters=document.getElementById("filters"),query=document.getElementById("q");function update(){var term=query.value.trim().toLocaleLowerCase("tr"),total=0;document.querySelectorAll("section.cat").forEach(function(section){var shown=0;section.querySelectorAll(".card").forEach(function(card){var text=(card.dataset.search||card.textContent).toLocaleLowerCase("tr"),visible=(active==="all"||active===section.dataset.cat)&&(!term||text.includes(term));card.style.display=visible?"":"none";if(visible)shown++});section.style.display=shown?"":"none";total+=shown});document.getElementById("empty").style.display=total?"none":"block"}filters.addEventListener("click",function(event){var link=event.target.closest("a[data-c]");if(!link)return;event.preventDefault();active=link.dataset.c;filters.querySelectorAll("a").forEach(function(item){item.classList.toggle("active",item===link)});update()});query.addEventListener("input",update)})();</script><script defer src="./city-video-slots.js"></script>
 </body></html>

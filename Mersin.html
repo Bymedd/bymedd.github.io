@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,12 +6,67 @@
 <meta name="description" content="Mersin gezi rehberi: Kızkalesi, Cennet-Cehennem Obrukları, Tarsus, Uzuncaburç, sahiller, doğa rotaları ve Mersin mutfağı.">
 <meta name="keywords" content="Mersin gezi rehberi, Mersin gezilecek yerler, Kızkalesi, Cennet Cehennem, Tarsus, Uzuncaburç, Mersin sahilleri, tantuni">
 <link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css">
-</head>
+<style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
 <body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
 <header class="hero"><h1>Mersin Gezi Rehberi</h1><p>Akdeniz kıyılarından Kızkalesi'ne, Tarsus'un kültür mirasından Toroslar'ın doğasına uzanan keşif rotaları.</p><div class="stats"><div class="stat"><b>6</b>Tarihî Yer</div><div class="stat"><b>3</b>Müze</div><div class="stat"><b>4</b>Doğa</div><div class="stat"><b>5</b>Kıyı rotası</div><div class="stat"><b>6</b>Lezzet</div></div></header>
 <nav class="top"><div class="navin"><span class="brand">MERSİN REHBERİ</span><input id="q" type="search" placeholder="Yer, ilçe veya lezzet ara..." aria-label="Mersin rehberinde ara"></div></nav>
 <div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">🌊 Sahiller &amp; göller</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div>
-<main><div id="content">
+<main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Mersin'i videolarla keşfedin</h2><p class="lead">Tarih, kıyı ve yöresel mutfak durakları için şehir gezi içerikleri.</p><div class="grid"><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Kızkalesi ve antik kentler</h3><p>Korykos, Cennet-Cehennem ve kıyı çevresini keşfedin.</p><a class="map" href="https://www.youtube.com/results?search_query=Mersin+K%C4%B1zkalesi+Cennet+Cehennem+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Tarsus ve Mersin lezzetleri</h3><p>Tarsus'un tarihî durakları, tantuni ve yöresel mutfak rotaları.</p><a class="map" href="https://www.youtube.com/results?search_query=Mersin+Tarsus+tantuni+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article></div></section>
 <section class="cat" id="tarihi" data-cat="tarihi"><h2>🏛️ Tarihî ve kültürel yerler</h2><p class="lead">Kilikya uygarlıklarından Roma dönemine uzanan kıyı ve kent mirası.</p><div class="grid">
 <article class="card" data-search="kızkalesi deniz kalesi korikos erdemli"><div class="band c-tarihi"></div><div class="cbody"><h3>Kızkalesi (Korykos)</h3><div class="meta"><span class="tag dist">Erdemli</span><span class="tag">Kıyı kalesi</span></div><p>Kıyıdaki kale ve karşısındaki deniz kalesi Mersin'in simge tarih duraklarındandır.</p><div class="tip">Deniz ulaşımı ve kale erişimi hava ve sezon koşullarına bağlıdır; güvenlik uyarılarına uyun.</div><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=K%C4%B1zkalesi+Mersin" target="_blank" rel="noopener">Haritada aç →</a></div></article>
@@ -41,6 +96,7 @@
 <section class="cat" id="lezzet" data-cat="lezzet"><h2>🍽️ Mersin'in yerel lezzetleri</h2><p class="lead">Akdeniz mutfağı, sokak lezzetleri ve yöresel tatlılar.</p><div class="grid"><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Tantuni</h3><div class="meta"><span class="tag dish">Yöresel yemek</span></div><p>İnce doğranmış etin sacda pişirildiği ve lavaş ya da ekmekle sunulduğu Mersin klasiği.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Cezerye</h3><div class="meta"><span class="tag dish">Yöresel tatlı</span></div><p>Havuç, şeker ve kuruyemişle hazırlanan, kentin tanınan ikramlıklarından.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Kerebiç</h3><div class="meta"><span class="tag dish">Yöresel tatlı</span></div><p>İrmikli hamur ve iç dolguyla hazırlanan, köpük eşliğinde sunulabilen geleneksel tatlı.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Batırık</h3><div class="meta"><span class="tag dish">Yöresel yemek</span></div><p>Bulgur, tahin ve yöresel malzemelerle hazırlanan soğuk veya sulu sunumlu lezzet.</p></div></article></div></section>
 </div><div id="empty" class="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div>
 <section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Antik alanlar:</b> Açık saat, ücret ve erişim koşulları değişebilir; müze ve ören yeri duyurularını kontrol edin.</li><li><b>Deniz:</b> Akıntı ve hava koşullarını dikkate alın; yalnızca güvenli ve izinli plajları kullanın.</li><li><b>Kamp ve piknik:</b> Orman yangını dönemlerinde giriş ve ateş kısıtlamaları olabilir; Valilik ve DKMP duyurularını izleyin.</li><li><b>Ulaşım:</b> Tarsus, Erdemli, Silifke ve Anamur birbirinden uzak rotalardır; günleri bölerek planlayın.</li><li><b>Mevsim:</b> İlkbahar ve sonbahar tarih/doğa gezileri için rahat olabilir; yazın sıcaklığı ve kıyı yoğunluğunu hesaba katın.</li></ul></section></main>
-<footer>Mersin Gezi Rehberi · Kıyı ve korunan alanlara ilişkin güncel duyuruları ziyaret öncesi kontrol edin.</footer>
+<footer>Mersin Gezi Rehberi · Kıyı ve korunan alanlara ilişkin güncel duyuruları ziyaret öncesi kontrol edin.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",f=document.getElementById("filters"),q=document.getElementById("q");function run(){var t=q.value.trim().toLocaleLowerCase("tr"),n=0;document.querySelectorAll("section.cat").forEach(function(s){var k=0;s.querySelectorAll(".card").forEach(function(c){var x=(c.dataset.search||c.textContent).toLocaleLowerCase("tr"),v=(active==="all"||active===s.dataset.cat)&&(!t||x.includes(t));c.style.display=v?"":"none";if(v)k++});s.style.display=k?"":"none";n+=k});document.getElementById("empty").style.display=n?"none":"block"}f.addEventListener("click",function(e){var a=e.target.closest("a[data-c]");if(!a)return;e.preventDefault();active=a.dataset.c;f.querySelectorAll("a").forEach(function(x){x.classList.toggle("active",x===a)});run()});q.addEventListener("input",run)})();</script><script defer src="./city-video-slots.js"></script>
 </body></html>

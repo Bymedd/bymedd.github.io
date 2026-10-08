@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rusya Gezi Rehberi</title>
+  <meta name="description" content="Rusya'nın şehirlerini, tarihî mekânlarını, kültürünü ve geniş coğrafyasındaki gezi rotalarını keşfedin.">
   <style>
     :root {
       --bg: #0b1020;
@@ -136,8 +137,62 @@
       .hero { grid-template-columns: 1fr; }
     }
   </style>
-</head>
+<style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
 <body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
   <div class="wrap">
     <div class="hero">
       <div>
@@ -167,6 +222,7 @@
     </div>
 
     <section class="section">
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div>
       <div class="section-head">Öne çıkan duraklar</div>
       <div class="grid">
         <article class="card">
@@ -202,5 +258,6 @@
 
     <a class="back" href="index.html">← Ana haritaya dön</a>
   </div>
+<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
 </body>
 </html>

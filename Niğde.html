@@ -1,13 +1,68 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Niğde Gezi Rehberi | Aladağlar, Gümüşler ve Tyana</title>
 <meta name="description" content="Niğde gezi rehberi: Aladağlar, Gümüşler Manastırı, Tyana Antik Kenti, Niğde Kalesi, müzeler ve yöresel lezzetler.">
 <meta name="keywords" content="Niğde gezi rehberi, Aladağlar, Gümüşler Manastırı, Tyana, Niğde Kalesi, Niğde gezilecek yerler">
-<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"></head><body>
+<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"><style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head><body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
 <header class="hero"><h1>Niğde Gezi Rehberi</h1><p>Aladağlar'ın yüksek zirvelerinden Gümüşler Manastırı'na, Tyana'nın su kemerlerinden tarihî kent merkezine.</p><div class="stats"><div class="stat"><b>5</b>Tarihî Yer</div><div class="stat"><b>2</b>Müze</div><div class="stat"><b>4</b>Doğa</div><div class="stat"><b>4</b>Rota</div><div class="stat"><b>5</b>Lezzet</div></div></header>
 <nav class="top"><div class="navin"><span class="brand">NİĞDE REHBERİ</span><input id="q" type="search" placeholder="Yer, ilçe veya lezzet ara..." aria-label="Niğde rehberinde ara"></div></nav>
 <div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">🌊 Göller &amp; barajlar</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div>
-<main><div id="content">
+<main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Niğde'yi videolarla keşfedin</h2><p class="lead">Dağ, manastır ve antik kent rotaları için gezi içerikleri.</p><div class="grid"><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Aladağlar ve Çamardı</h3><p>Dağ yürüyüşleri, yaylalar ve vadi manzaraları.</p><a class="map" href="https://www.youtube.com/results?search_query=Ni%C4%9Fde+Alada%C4%9Flar+%C3%87amard%C4%B1+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Gümüşler ve Niğde merkezi</h3><p>Manastır, kale ve tarihî kent durakları.</p><a class="map" href="https://www.youtube.com/results?search_query=Ni%C4%9Fde+G%C3%BCm%C3%BC%C5%9Fler+Manast%C4%B1r%C4%B1+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article></div></section>
 <section class="cat" id="tarihi" data-cat="tarihi"><h2>🏛️ Tarihî ve kültürel yerler</h2><p class="lead">Bizans manastırlarından Selçuklu mirasına, antik su yollarına.</p><div class="grid"><article class="card" data-search="gümüşler manastırı kaya oyma fresk"><div class="band c-tarihi"></div><div class="cbody"><h3>Gümüşler Manastırı</h3><div class="meta"><span class="tag dist">Gümüşler</span><span class="tag">Kaya manastırı</span></div><p>Kaya içine oyulmuş kilise ve freskleri koruma kurallarına uyarak ziyaret edin.</p><div class="tip">Açık saat, restorasyon ve ziyaretçi erişimini önceden kontrol edin.</div><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=G%C3%BCm%C3%BC%C5%9Fler+Manast%C4%B1r%C4%B1" target="_blank" rel="noopener">Haritada aç →</a></div></article><article class="card" data-search="tyana antik kenti su kemerleri kemerhisar"><div class="band c-tarihi"></div><div class="cbody"><h3>Tyana Antik Kenti ve su kemerleri</h3><div class="meta"><span class="tag dist">Kemerhisar-Bor</span><span class="tag">Roma dönemi</span></div><p>Antik kent kalıntıları ve Roma su kemerlerini saha sınırlarına uyarak gezin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Tyana+Antik+Kenti" target="_blank" rel="noopener">Haritada aç →</a></div></article><article class="card" data-search="niğde kalesi saat kulesi alaaddin camii"><div class="band c-tarihi"></div><div class="cbody"><h3>Niğde Kalesi ve tarihî merkez</h3><div class="meta"><span class="tag dist">Merkez</span></div><p>Kale, saat kulesi ve çevredeki tarihî yapıları yaya rotasında keşfedin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Ni%C4%9Fde+Kalesi" target="_blank" rel="noopener">Haritada aç →</a></div></article><article class="card" data-search="eski gümüşler manastır roma havuzu"><div class="band c-tarihi"></div><div class="cbody"><h3>Roma Havuzu</h3><div class="meta"><span class="tag dist">Kemerhisar</span><span class="tag">Roma su yapısı</span></div><p>Tyana su kemerleriyle bağlantılı tarihî havuz çevresinde koruma yönlendirmelerini izleyin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Roma+Havuzu+Ni%C4%9Fde" target="_blank" rel="noopener">Haritada aç →</a></div></article></div></section>
 <section class="cat" id="muze" data-cat="muze"><h2>🖼️ Müzeler</h2><p class="lead">Niğde'nin arkeoloji ve kültür koleksiyonlarını kent gezisine ekleyin.</p><div class="grid"><article class="card" data-search="niğde müzesi arkeoloji etnografya"><div class="band c-muze"></div><div class="cbody"><h3>Niğde Müzesi</h3><div class="meta"><span class="tag dist">Merkez</span></div><p>Bölge arkeolojisini ve tarihî koleksiyonları ziyaret saatlerini kontrol ederek inceleyin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Ni%C4%9Fde+M%C3%BCzesi" target="_blank" rel="noopener">Haritada aç →</a></div></article><article class="card" data-search="bor müzesi kent kültürü"><div class="band c-muze"></div><div class="cbody"><h3>Bor kültür durakları</h3><div class="meta"><span class="tag dist">Bor</span></div><p>İlçe kültür mekânlarının ve sergi alanlarının açık durumunu yerel kaynaklardan teyit edin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Bor+Ni%C4%9Fde+m%C3%BCze" target="_blank" rel="noopener">Haritada ara →</a></div></article></div></section>
@@ -18,5 +73,6 @@
 <section class="cat" id="ilce" data-cat="ilce"><h2>🚗 İlçe gezileri ve günübirlik rotalar</h2><p class="lead">Merkez, Bor ve Çamardı rotalarını mesafe ve mevsime göre ayırın.</p><div class="grid"><article class="card" data-search="niğde merkez kale müze rota"><div class="band c-ilce"></div><div class="cbody"><h3>Niğde merkez tarih rotası</h3><div class="meta"><span class="tag dist">Yarım gün</span></div><p>Kale, müze ve tarihî camileri yaya rotasında, açık saatleri kontrol ederek gezin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Ni%C4%9Fde+merkez" target="_blank" rel="noopener">Rotayı aç →</a></div></article><article class="card" data-search="bor tyana gümüşler manastırı rota"><div class="band c-ilce"></div><div class="cbody"><h3>Bor, Tyana ve Gümüşler</h3><div class="meta"><span class="tag dist">Tam gün</span></div><p>Antik kent ve manastır duraklarını yol süreleri ve ziyaret saatlerine göre birleştirin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Bor+Ni%C4%9Fde" target="_blank" rel="noopener">Rotayı aç →</a></div></article><article class="card" data-search="çamardı aladağlar demirkazık rota"><div class="band c-ilce"></div><div class="cbody"><h3>Çamardı ve Aladağlar</h3><div class="meta"><span class="tag dist">Tam gün veya konaklamalı</span></div><p>Dağ rotasını deneyim, izin, hava ve ulaşım koşullarına göre planlayın.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%87amard%C4%B1+Ni%C4%9Fde" target="_blank" rel="noopener">Rotayı aç →</a></div></article></div></section>
 <section class="cat" id="lezzet" data-cat="lezzet"><h2>🍽️ Niğde'nin yerel lezzetleri</h2><p class="lead">İç Anadolu mutfağının patatesi, tahılı ve et yemekleri.</p><div class="grid"><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Niğde tava</h3><div class="meta"><span class="tag dish">Yöresel yemek</span></div><p>Et ve sebzelerle fırında hazırlanan, yörede bilinen yemeklerden.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Niğde gazozu</h3><div class="meta"><span class="tag dish">Yöresel içecek</span></div><p>Kentle özdeşleşen gazozu yerel işletmelerde deneyin.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Patatesli yemekler</h3><div class="meta"><span class="tag dish">Yöresel ürün</span></div><p>Niğde'nin tarımsal üretiminde öne çıkan patatesi yöresel tariflerle tadın.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Kaymak tatlısı</h3><div class="meta"><span class="tag dish">Yöresel tatlı</span></div><p>Süt ürünleriyle hazırlanan geleneksel tatlıları yerel üreticilerden deneyin.</p></div></article></div></section>
 </div><div id="empty" class="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div><section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Aladağlar:</b> Yüksek irtifa ve hava koşulları için uygun ekipman, deneyim ve güncel parkur bilgisi gerekir.</li><li><b>Manastır ve ören yerleri:</b> Ziyaret saatleri ile restorasyon ve erişim durumunu resmî kaynaklardan doğrulayın.</li><li><b>Baraj ve göller:</b> Suya girmeyin; kıyı ve kamp kurallarına uyun.</li><li><b>Kamp ve ateş:</b> Millî park izinleri ve sezonluk yangın kısıtlamalarını kontrol edin.</li><li><b>Ulaşım:</b> Çamardı, Bor ve merkez arasındaki mesafeleri rotaya dahil edin.</li></ul></section></main>
-<footer>Niğde Gezi Rehberi · Dağ ve korunan alan koşullarını ziyaret öncesi kontrol edin.</footer>
+<footer>Niğde Gezi Rehberi · Dağ ve korunan alan koşullarını ziyaret öncesi kontrol edin.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",f=document.getElementById("filters"),q=document.getElementById("q");function run(){var t=q.value.trim().toLocaleLowerCase("tr"),n=0;document.querySelectorAll("section.cat").forEach(function(s){var k=0;s.querySelectorAll(".card").forEach(function(c){var x=(c.dataset.search||c.textContent).toLocaleLowerCase("tr"),v=(active==="all"||active===s.dataset.cat)&&(!t||x.includes(t));c.style.display=v?"":"none";if(v)k++});s.style.display=k?"":"none";n+=k});document.getElementById("empty").style.display=n?"none":"block"}f.addEventListener("click",function(e){var a=e.target.closest("a[data-c]");if(!a)return;e.preventDefault();active=a.dataset.c;f.querySelectorAll("a").forEach(function(x){x.classList.toggle("active",x===a)});run()});q.addEventListener("input",run)})();</script><script defer src="./city-video-slots.js"></script></body></html>

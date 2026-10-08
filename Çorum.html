@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -8,8 +8,62 @@
 <meta name="keywords" content="Çorum gezi rehberi, Hattuşa, Yazılıkaya, Alacahöyük, İncesu Kanyonu, Çorum gezilecek yerler, leblebi">
 <link rel="stylesheet" href="./ege-guide-layout.css">
 <link rel="stylesheet" href="./city-guides-dark.css">
-</head>
+<style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
 <body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
 <header class="hero">
   <h1>Çorum Gezi Rehberi</h1>
   <p>Hitit başkenti Hattuşa'dan Alacahöyük'e, binlerce yıllık Anadolu tarihi ve güçlü bir yerel mutfak rotası.</p>
@@ -19,7 +73,8 @@
 <div class="filters" id="filters">
   <a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">🌊 Kanyon &amp; baraj</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a>
 </div>
-<main><div id="content">
+<main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Çorum'u videolarla keşfedin</h2><p class="lead">Hitit uygarlığı, antik kentler ve yerel mutfak için gezi içerikleri.</p><div class="grid">
   <article class="card"><div class="band c-video"></div><div class="cbody"><h3>Hattuşa ve Yazılıkaya</h3><p>Hitit başkenti ve açık hava tapınağı için gezi videoları.</p><a class="map" href="https://www.youtube.com/results?search_query=%C3%87orum+Hattu%C5%9Fa+Yaz%C4%B1l%C4%B1kaya+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article>
   <article class="card"><div class="band c-video"></div><div class="cbody"><h3>Çorum mutfağı ve şehir gezisi</h3><p>Leblebi, İskilip dolması ve tarihî merkez içerikleri.</p><a class="map" href="https://www.youtube.com/results?search_query=%C3%87orum+yemek+gezi+%C4%B0skilip" target="_blank" rel="noopener">YouTube'da ara →</a></div></article>
@@ -69,7 +124,8 @@
 <div class="empty" id="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div>
 <section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Hattuşa ve Alacahöyük:</b> Geniş açık alanlar için su, şapka ve rahat ayakkabı bulundurun.</li><li><b>Müzeler:</b> Ziyaret gün ve saatleri değişebilir; resmî duyuruları kontrol edin.</li><li><b>Kanyon:</b> Yağış ve su seviyesi uyarılarını izleyin; güvenli parkur sınırında kalın.</li><li><b>Baraj gölleri:</b> Yüzme ve kıyı erişim kurallarına uyun; yasak alanlara girmeyin.</li></ul></section>
 </main>
-<footer>Çorum Gezi Rehberi · Arkeolojik alan, müze ve doğa rotalarının güncel ziyaret koşullarını kontrol edin.</footer>
+<footer>Çorum Gezi Rehberi · Arkeolojik alan, müze ve doğa rotalarının güncel ziyaret koşullarını kontrol edin.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",filters=document.getElementById("filters"),query=document.getElementById("q");function update(){var term=query.value.trim().toLocaleLowerCase("tr"),total=0;document.querySelectorAll("section.cat").forEach(function(section){var shown=0;section.querySelectorAll(".card").forEach(function(card){var text=(card.dataset.search||card.textContent).toLocaleLowerCase("tr"),visible=(active==="all"||active===section.dataset.cat)&&(!term||text.includes(term));card.style.display=visible?"":"none";if(visible)shown++});section.style.display=shown?"":"none";total+=shown});document.getElementById("empty").style.display=total?"none":"block"}filters.addEventListener("click",function(event){var link=event.target.closest("a[data-c]");if(!link)return;event.preventDefault();active=link.dataset.c;filters.querySelectorAll("a").forEach(function(item){item.classList.toggle("active",item===link)});update()});query.addEventListener("input",update)})();</script>
 <script defer src="./city-video-slots.js"></script>
 </body>

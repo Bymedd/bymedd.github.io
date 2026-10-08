@@ -908,7 +908,6 @@
 
                 const region = btn.getAttribute('data-region');
                 AppState.activeRegionFilter = region;
-
                 filterMapByRegion(region);
             });
         });
@@ -926,12 +925,13 @@
 
             const isMatch = (regionId === 'all' || provinceData.regionId === regionId);
             g.classList.toggle('dimmed', !isMatch);
-            
+
             const groupId = g.getAttribute('id');
             const label = svg.querySelector(`.city-map-label[data-target-id="${groupId}"]`) ||
                           svg.querySelector(`.city-map-label[data-target-id="${provinceData.id}"]`);
             if (label) {
-                label.style.opacity = isMatch ? '1' : '0.25';
+                const defaultOpacity = regionId === 'all' ? '0.45' : isMatch ? '1' : '0.25';
+                label.style.opacity = defaultOpacity;
             }
         });
     }
@@ -1028,6 +1028,7 @@
 
         // Harita ve Şehir İsimlerini Yükle
         initMap();
+        filterMapByRegion(AppState.activeRegionFilter);
 
         // Supabase Entegrasyonu
         if (window.GeziSupabase) {

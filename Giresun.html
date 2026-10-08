@@ -1,15 +1,70 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Giresun Gezi Rehberi | Ada, Mavi Göl, Yaylalar ve Fındık</title>
 <meta name="description" content="Giresun gezi rehberi: Giresun Adası, Kuzalan Şelalesi, Mavi Göl, Kümbet Yaylası, kaleler ve yöresel lezzetler.">
 <meta name="keywords" content="Giresun gezi rehberi, Giresun Adası, Mavi Göl, Kuzalan Şelalesi, Kümbet Yaylası, gezilecek yerler, fındık">
-<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"></head>
+<link rel="stylesheet" href="./ege-guide-layout.css"><link rel="stylesheet" href="./city-guides-dark.css"><style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
 <body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div>
 <header class="hero"><h1>Giresun Gezi Rehberi</h1><p>Karadeniz kıyısındaki adadan yayla ve şelale rotalarına, fındık diyarında doğa keşfi.</p><div class="stats"><div class="stat"><b>5</b>Tarihî Yer</div><div class="stat"><b>2</b>Müze</div><div class="stat"><b>5</b>Doğa</div><div class="stat"><b>4</b>Kıyı &amp; göl</div><div class="stat"><b>5</b>Lezzet</div></div></header>
 <nav class="top"><div class="navin"><span class="brand">GİRESUN REHBERİ</span><input id="q" type="search" placeholder="Yer, ilçe veya lezzet ara..."></div></nav>
 <div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">🌊 Kıyı &amp; göl</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div>
-<main><div id="content">
+<main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Giresun'u videolarla keşfedin</h2><p class="lead">Kıyı, yayla ve yöresel mutfak rotaları için içerikler.</p><div class="grid"><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Giresun Adası ve şehir</h3><p>Merkez, kale ve ada rotası.</p><a class="map" href="https://www.youtube.com/results?search_query=Giresun+Adası+Giresun+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Kümbet, Mavi Göl ve yaylalar</h3><p>Şelale ve yayla rotaları için güncel gezi içerikleri.</p><a class="map" href="https://www.youtube.com/results?search_query=Giresun+Mavi+Göl+Kümbet+Yaylası+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article></div></section>
 <section class="cat" id="tarihi" data-cat="tarihi"><h2>🏛️ Tarihî ve kültürel yerler</h2><p class="lead">Kıyı kentinin kalesi, adası ve tarihî mahalleleri.</p><div class="grid">
 <article class="card" data-search="giresun kalesi kale şehir manzara"><div class="band c-tarihi"></div><div class="cbody"><h3>Giresun Kalesi</h3><div class="meta"><span class="tag dist">Merkez</span></div><p>Şehre ve kıyıya bakan kale çevresinde manzara ve tarih yürüyüşü yapın.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Giresun+Kalesi" target="_blank" rel="noopener">Haritada aç →</a></div></article>
@@ -27,6 +82,7 @@
 <section class="cat" id="ilce" data-cat="ilce"><h2>🚗 İlçe gezileri ve günübirlik rotalar</h2><p class="lead">Dereli yayla ve şelale duraklarını merkez turundan ayrı planlayın.</p><div class="grid"><article class="card" data-search="dereli kuzalan mavi göl kümbet rota"><div class="band c-ilce"></div><div class="cbody"><h3>Dereli: Kuzalan ve Kümbet</h3><div class="meta"><span class="tag dist">Tam gün</span></div><p>Şelale, göl ve yayla ziyaretlerini yol, hava ve gün ışığına göre sıraya koyun.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Dereli+Giresun" target="_blank" rel="noopener">Rotayı aç →</a></div></article><article class="card" data-search="giresun merkez kale zeytinlik ada rota"><div class="band c-ilce"></div><div class="cbody"><h3>Giresun merkez ve ada rotası</h3><div class="meta"><span class="tag dist">Yarım/tam gün</span></div><p>Kale, Zeytinlik ve ada tekne seferlerini güncel programa göre birleştirin.</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Giresun+merkez" target="_blank" rel="noopener">Rotayı aç →</a></div></article></div></section>
 <section class="cat" id="lezzet" data-cat="lezzet"><h2>🍽️ Giresun'un yerel lezzetleri</h2><p class="lead">Fındık, karalahana ve Karadeniz mutfağından yöresel tatlar.</p><div class="grid"><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Giresun fındığı</h3><div class="meta"><span class="tag dish">Yöresel ürün</span></div><p>Hasat mevsiminde taze fındık ve güvenilir yerel ürünleri deneyin.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Karalahana sarması ve çorbası</h3><div class="meta"><span class="tag dish">Karadeniz mutfağı</span></div><p>Karalahana ve yöresel tahıllarla hazırlanan geleneksel yemekler.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Fasulye diblesi</h3><div class="meta"><span class="tag dish">Yöresel</span></div><p>Taze fasulye ve pirinçle hazırlanan bölgesel tencere yemeği.</p></div></article><article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Pancar çorbası</h3><div class="meta"><span class="tag dish">Yöresel çorba</span></div><p>Karadeniz mutfağında pancar/karalahana ile hazırlanan doyurucu çorba.</p></div></article></div></section>
 </div><div class="empty" id="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div><section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Yaylalar:</b> Yol ve hava koşullarını kontrol edin; yazın bile akşamlar serin olabilir.</li><li><b>Şelale ve Mavi Göl:</b> Kaygan zemin ve koruma uyarılarına uyun.</li><li><b>Deniz:</b> Karadeniz'de akıntı ve dalga riskine karşı yerel yüzme uyarılarını takip edin.</li><li><b>Kamp:</b> Ormanlık alanlarda ateş ve giriş yasakları dönemsel uygulanabilir.</li></ul></section></main>
-<footer>Giresun Gezi Rehberi · Yayla, müze ve korunan alan koşullarını önceden doğrulayın.</footer>
+<footer>Giresun Gezi Rehberi · Yayla, müze ve korunan alan koşullarını önceden doğrulayın.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",filters=document.getElementById("filters"),query=document.getElementById("q");function update(){var term=query.value.trim().toLocaleLowerCase("tr"),total=0;document.querySelectorAll("section.cat").forEach(function(section){var shown=0;section.querySelectorAll(".card").forEach(function(card){var text=(card.dataset.search||card.textContent).toLocaleLowerCase("tr"),visible=(active==="all"||active===section.dataset.cat)&&(!term||text.includes(term));card.style.display=visible?"":"none";if(visible)shown++});section.style.display=shown?"":"none";total+=shown});document.getElementById("empty").style.display=total?"none":"block"}filters.addEventListener("click",function(event){var link=event.target.closest("a[data-c]");if(!link)return;event.preventDefault();active=link.dataset.c;filters.querySelectorAll("a").forEach(function(item){item.classList.toggle("active",item===link)});update()});query.addEventListener("input",update)})();</script><script defer src="./city-video-slots.js"></script>
 </body></html>

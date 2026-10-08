@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,10 +8,65 @@
 <style>
 :root{--red:#c8102e;--dark:#1d2433;--soft:#f5f3ef;--green:#2e7d4f;--blue:#1f6fb2;--amber:#b7791f;--purple:#6b46c1;--teal:#0f766e}*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--soft);color:var(--dark);line-height:1.6}a{color:inherit}header.hero{background:linear-gradient(135deg,rgba(29,36,51,.92),rgba(200,16,46,.72)),linear-gradient(135deg,#0e7490,#f0ab36);color:#fff;padding:66px 20px 48px;text-align:center}.hero h1{font-size:clamp(2rem,5vw,3.3rem)}.hero p{max-width:820px;margin:12px auto 0}.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}.stat{background:#ffffff22;border:1px solid #ffffff44;border-radius:13px;padding:9px 15px;min-width:100px}.stat b{display:block;font-size:1.4rem}nav.top{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 2px 12px #0002}.navin{max-width:1200px;margin:auto;padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.brand{font-weight:800;color:var(--red);margin-right:auto}.navin input{padding:10px 14px;border:1px solid #d6d3cc;border-radius:999px;max-width:380px;flex:1}.filters{max-width:1200px;margin:18px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:8px}.filters a{text-decoration:none;padding:8px 12px;border-radius:999px;background:#fff;font-weight:600;font-size:.88rem}.filters a.active,.filters a:hover{background:var(--dark);color:#fff}main{max-width:1200px;margin:auto;padding:20px 16px 50px}section.cat{margin-top:32px;scroll-margin-top:80px}section.cat h2{font-size:1.55rem;margin-bottom:5px}section.cat .lead{color:#5b6170;margin-bottom:15px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:15px}.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 3px 14px #0001;display:flex;flex-direction:column}.band{height:7px}.c-tarihi{background:var(--red)}.c-muze{background:var(--purple)}.c-park{background:var(--green)}.c-piknik{background:var(--amber)}.c-kamp{background:var(--teal)}.c-su{background:var(--blue)}.c-ilce{background:#7c5c3b}.c-lezzet{background:#d9480f}.c-video{background:#dc2626}.cbody{padding:15px;display:flex;flex-direction:column;gap:7px;flex:1}.card h3{font-size:1.06rem}.card p{font-size:.91rem;color:#3c4354}.meta{display:flex;flex-wrap:wrap;gap:5px}.tag{font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:99px;background:#eef0f4}.tag.dist{background:#fdecef;color:var(--red)}.tag.dish{background:#fff1e6;color:#b34700}.tip{font-size:.82rem;background:#f7f5ef;border-left:3px solid var(--amber);padding:7px 9px;border-radius:5px}.map{margin-top:auto;align-self:flex-start;text-decoration:none;font-weight:700;color:var(--blue);font-size:.87rem}.info{background:#fff;border-radius:15px;padding:22px;margin-top:34px;box-shadow:0 3px 14px #0001}.info ul{padding-left:20px}.info li{margin:7px 0}.empty{display:none;text-align:center;padding:40px;color:#6b7280}footer{background:var(--dark);color:#cfd3dc;text-align:center;padding:24px 16px;font-size:.9rem}@media(max-width:600px){header.hero{padding:46px 16px 34px}.grid{grid-template-columns:1fr}}
 </style><link rel="stylesheet" href="./city-guides-dark.css">
-</head>
-<body><header class="hero"><h1>Denizli Gezi Rehberi</h1><p>Pamukkale'nin beyaz travertenlerinden Hierapolis ve Laodikeia'ya; yaylalardan şelalelere uzanan Denizli keşfi.</p><div class="stats"><div class="stat"><b>7</b>Tarihî Yer</div><div class="stat"><b>3</b>Müze</div><div class="stat"><b>5</b>Doğa</div><div class="stat"><b>4</b>Su &amp; termal</div><div class="stat"><b>5</b>Lezzet</div></div></header>
+<style>
+  .adsense-spot {
+    width: min(100%, 728px);
+    margin: 14px auto 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(30, 41, 59, 0.88));
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .adsense-spot::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.06),
+      rgba(148, 163, 184, 0.06) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+    pointer-events: none;
+  }
+  .adsense-spot span, .adsense-spot small { position: relative; z-index: 1; }
+  .adsense-spot small { opacity: 0.8; letter-spacing: 0.08em; }
+  .adsense-spot--top { margin-top: 12px; }
+  .adsense-spot--map {
+    width: min(100%, 300px);
+    min-height: 90px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+  .adsense-spot--bottom {
+    width: min(100%, 320px);
+    min-height: 100px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 768px) {
+    .adsense-spot { min-height: 72px; padding: 8px 12px; font-size: 9px; letter-spacing: 0.1em; }
+    .adsense-spot--bottom { min-height: 100px; }
+    .adsense-spot--map { width: min(100%, 250px); }
+  }
+</style></head>
+<body>
+<div class="adsense-spot adsense-spot--top" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>728 × 90</small></div><header class="hero"><h1>Denizli Gezi Rehberi</h1><p>Pamukkale'nin beyaz travertenlerinden Hierapolis ve Laodikeia'ya; yaylalardan şelalelere uzanan Denizli keşfi.</p><div class="stats"><div class="stat"><b>7</b>Tarihî Yer</div><div class="stat"><b>3</b>Müze</div><div class="stat"><b>5</b>Doğa</div><div class="stat"><b>4</b>Su &amp; termal</div><div class="stat"><b>5</b>Lezzet</div></div></header>
 <nav class="top"><div class="navin"><span class="brand">DENİZLİ REHBERİ</span><input id="q" type="search" placeholder="Yer, ilçe veya lezzet ara..."></div></nav>
-<div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">♨️ Su &amp; termal</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div><main><div id="content">
+<div class="filters" id="filters"><a href="#" data-c="all" class="active">Tümü</a><a href="#videolar" data-c="videolar">🎬 Videolar</a><a href="#tarihi" data-c="tarihi">🏛️ Tarih</a><a href="#muze" data-c="muze">🖼️ Müzeler</a><a href="#park" data-c="park">🌳 Doğa</a><a href="#piknik" data-c="piknik">🧺 Piknik</a><a href="#kamp" data-c="kamp">⛺ Kamp</a><a href="#su" data-c="su">♨️ Su &amp; termal</a><a href="#ilce" data-c="ilce">🚗 İlçeler</a><a href="#lezzet" data-c="lezzet">🍽️ Lezzetler</a></div><main>
+<div class="adsense-spot adsense-spot--map" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>300 × 90</small></div><div id="content">
 <section class="cat" id="videolar" data-cat="videolar"><h2>🎬 Denizli'yi videolarla keşfedin</h2><p class="lead">Güncel gezi içeriklerini YouTube aramasıyla bulun.</p><div class="grid"><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Pamukkale ve Hierapolis</h3><p>Travertenler ve antik kent için gezi anlatımları.</p><a class="map" href="https://www.youtube.com/results?search_query=Pamukkale+Hierapolis+gezi" target="_blank" rel="noopener">YouTube'da ara →</a></div></article><article class="card"><div class="band c-video"></div><div class="cbody"><h3>Denizli yaylaları ve şelaleleri</h3><p>Doğa rotaları ve ilçe gezileri.</p><a class="map" href="https://www.youtube.com/results?search_query=Denizli+gezi+Tavas+Honaz+yayla" target="_blank" rel="noopener">YouTube'da ara →</a></div></article></div></section>
 <section class="cat" id="tarihi" data-cat="tarihi"><h2>🏛️ Tarihi ve kültürel yerler</h2><p class="lead">Antik kentler ve tarihî merkezlerle Denizli'nin binlerce yıllık geçmişini keşfedin.</p><div class="grid">
 <article class="card" data-search="pamukkale travertenleri hierapolis unesco"><div class="band c-tarihi"></div><div class="cbody"><h3>Pamukkale Travertenleri ve Hierapolis</h3><div class="meta"><span class="tag dist">Pamukkale</span><span class="tag">UNESCO</span></div><p>Beyaz traverten teraslarını ve antik Hierapolis kentini aynı ören yeri ziyaretinde görün.</p><div class="tip">Travertenlerde belirlenmiş güzergâhtan çıkmayın; saat, bilet ve erişim kurallarını resmî kaynaklardan kontrol edin.</div><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Pamukkale+Hierapolis" target="_blank" rel="noopener">Haritada aç →</a></div></article>
@@ -56,5 +111,6 @@
 <article class="card"><div class="band c-lezzet"></div><div class="cbody"><h3>Zafer gazozu</h3><div class="meta"><span class="tag dish">Yerel içecek</span></div><p>Denizli ile özdeşleşmiş yerel gazozu şehir merkezindeki satış noktalarında arayın.</p></div></article>
 </div></section></div><div class="empty" id="empty">Aramanızla eşleşen bir sonuç bulunamadı.</div>
 <section class="info"><h2>Gezmeden önce bilmeniz gerekenler</h2><ul><li><b>Pamukkale:</b> Koruma alanı kurallarına ve belirlenmiş ziyaret güzergâhlarına uyun; güncel giriş ve bilet bilgilerini kontrol edin.</li><li><b>Termal tesisler:</b> Havuz ve konaklama koşullarını tesislerden teyit edin.</li><li><b>Açık hava rotaları:</b> Antik kent, mağara ve dağ gezilerinde hava durumunu, yol ve parkur koşullarını önceden kontrol edin.</li><li><b>Kamp ve piknik:</b> Yangın riski dönemlerinde yasak ve kısıtlamalara uyun; yalnızca izinli alanları kullanın.</li><li><b>Mevsim:</b> İlkbahar ve sonbahar açık hava gezileri için rahattır; yazın antik alanlara sabah erken gidin.</li></ul></section></main>
-<footer>Denizli Gezi Rehberi · Ziyaret öncesi resmî duyuruları ve güncel erişim koşullarını kontrol edin.</footer>
+<footer>Denizli Gezi Rehberi · Ziyaret öncesi resmî duyuruları ve güncel erişim koşullarını kontrol edin.<div class="adsense-spot adsense-spot--bottom" aria-label="Google AdSense reklam alanı"><span>Google AdSense</span><small>320 × 100</small></div>
+</footer>
 <script>(function(){var active="all",filters=document.getElementById("filters"),q=document.getElementById("q");function apply(){var term=q.value.trim().toLocaleLowerCase("tr"),total=0;document.querySelectorAll("section.cat").forEach(function(s){var n=0;s.querySelectorAll(".card").forEach(function(c){var text=(c.getAttribute("data-search")||c.textContent).toLocaleLowerCase("tr"),ok=(active==="all"||active===s.dataset.cat)&&(!term||text.includes(term));c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";total+=n});document.getElementById("empty").style.display=total?"none":"block"}filters.addEventListener("click",function(e){var a=e.target.closest("a[data-c]");if(!a)return;e.preventDefault();active=a.dataset.c;filters.querySelectorAll("a").forEach(function(x){x.classList.toggle("active",x===a)});apply()});q.addEventListener("input",apply)})();</script><script defer src="./city-video-slots.js"></script></body></html>
