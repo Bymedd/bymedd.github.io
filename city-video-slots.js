@@ -28,7 +28,7 @@
     heading.append(eyebrow, title, intro);
     showcase.appendChild(heading);
 
-    const videoGroups = [
+    const defaultGroups = [
         {
             title: 'Yerli YouTuber’lardan',
             label: 'Yerli içerik üreticisi',
@@ -51,6 +51,15 @@
         }
     ];
 
+    // Sayfa, window.CITY_VIDEO_SLOTS ile kendi video listesini tanımlayabilir.
+    // Tanımlanmadığında önceki varsayılan (şehir bazlı) gruplar kullanılır.
+    const customGroups = window.CITY_VIDEO_SLOTS
+        && Array.isArray(window.CITY_VIDEO_SLOTS.groups)
+        && window.CITY_VIDEO_SLOTS.groups.length
+        ? window.CITY_VIDEO_SLOTS.groups
+        : null;
+    const videoGroups = customGroups || defaultGroups;
+
     videoGroups.forEach((group, groupIndex) => {
         const section = document.createElement('section');
         section.className = 'creator-video-group';
@@ -61,7 +70,7 @@
         const grid = document.createElement('div');
         grid.className = 'creator-video-grid';
 
-        for (let slotIndex = 1; slotIndex <= 4; slotIndex += 1) {
+        for (let slotIndex = 1; slotIndex <= (group.items ? group.items.length : 4); slotIndex += 1) {
             const video = group.items[slotIndex - 1];
             const card = document.createElement('article');
             card.className = 'creator-video-card';
