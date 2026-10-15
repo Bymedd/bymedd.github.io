@@ -2,7 +2,7 @@
     'use strict';
 
     const hero = document.querySelector('header.hero');
-    const ankaraGuide = document.getElementById('ankaraGuideSection');
+    const ankaraGuide = null; // compact akis: ankart artik iframe iceriyor, govde disari enjekte edilmiyor
     const videoContainer = hero || ankaraGuide;
     if (!videoContainer || document.getElementById('creator-video-showcase')) return;
 
@@ -126,7 +126,7 @@
     });
 
     if (hero) hero.insertAdjacentElement('afterend', showcase);
-    else ankaraGuide.prepend(showcase);
+    else if (ankaraGuide) ankaraGuide.prepend(showcase);
 
     const stylesheet = document.createElement('link');
     stylesheet.rel = 'stylesheet';

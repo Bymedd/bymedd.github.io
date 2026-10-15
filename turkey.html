@@ -12,6 +12,7 @@
     <link href="./G%20projesi/Türkiye Şehirleri Gezi Rehberi_files/css2" rel="stylesheet">
     <!-- CSS Stilleri -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./chat.css">
     <style>
         .adsense-spot {
             width: min(100%, 728px);
@@ -161,6 +162,7 @@
                 <button class="region-pill" data-region="karadeniz">🌲 Karadeniz</button>
                 <button class="region-pill" data-region="doguanadolu">🏔️ Doğu Anadolu</button>
                 <button class="region-pill" data-region="guneydoguanadolu">🏛️ Güneydoğu</button>
+                <button type="button" id="chatOpenBtn" class="chat-pill" aria-controls="chatPanel" aria-expanded="false">💬 Sohbet</button>
             </div>
 
             <div class="map-view-controls">
@@ -899,286 +901,9 @@
                 <iframe class="city-guide-frame" src="./Yalova.html" title="Yalova Gezi Rehberi: Termal, sahil ve şelaleler" loading="lazy"></iframe>
             </section>
 
-            <div id="ankaraGuideSection" class="ankara-guide-wrapper" hidden>
-                <div class="ankara-hero-banner">
-                    <h3 class="ankara-hero-title">🏙️ Başkent Ankara Kapsamlı Gezi Rehberi</h3>
-                    <p class="ankara-hero-sub">Ankara'nın tarihi mekanları, müzeleri, parkları, piknik ve kamp alanları, gölleri, barajları ve YouTube videoları tek sayfada.</p>
-                    <div class="ankara-stats-badges">
-                        <span class="ankara-stat-pill">📍 <b>16</b> Rehber Kartı</span>
-                        <span class="ankara-stat-pill">🏛️ <b>2</b> Tarihi Yer</span>
-                        <span class="ankara-stat-pill">🖼️ <b>2</b> Müze</span>
-                        <span class="ankara-stat-pill">🌳 <b>2</b> Park &amp; Doğa</span>
-                        <span class="ankara-stat-pill">🧺 <b>2</b> Piknik Alanı</span>
-                        <span class="ankara-stat-pill">⛺ <b>2</b> Kamp Alanı</span>
-                        <span class="ankara-stat-pill">🌊 <b>2</b> Göl &amp; Baraj</span>
-                        <span class="ankara-stat-pill">🚗 <b>2</b> İlçe Rotası</span>
-                        <span class="ankara-stat-pill">🎬 <b>2</b> Video</span>
-                    </div>
-                </div>
-
-                <div class="ankara-toolbar-box">
-                    <div class="ankara-search-row">
-                        <input id="ankaraSearchInput" type="search" placeholder="Ankara'da yer, ilçe veya etkinlik ara..." autocomplete="off">
-                    </div>
-                    <div class="ankara-filter-pills" id="ankaraFilterPills">
-                        <button type="button" class="ankara-filter-btn active" data-ankara-cat="all" aria-pressed="true">Tümü (16)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="videolar" aria-pressed="false">🎬 Videolar (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="tarihi" aria-pressed="false">🏛️ Tarihi Yerler (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="muze" aria-pressed="false">🖼️ Müzeler (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="park" aria-pressed="false">🌳 Parklar (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="piknik" aria-pressed="false">🧺 Piknik Alanları (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="kamp" aria-pressed="false">⛺ Kamp Alanları (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="su" aria-pressed="false">🌊 Göller &amp; Barajlar (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="ilce" aria-pressed="false">🚗 İlçe Rotaları (2)</button>
-                        <button type="button" class="ankara-filter-btn" data-ankara-cat="notlar" aria-pressed="false">📌 Gezi Öncesi</button>
-                    </div>
-                    <div class="ankara-tag-cloud" aria-label="Ankara arama etiketleri">
-                        <button type="button" class="ankara-tag" data-ankara-term="Ankara gezilecek yerler">Ankara gezilecek yerler</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Ankara müzeleri">Ankara müzeleri</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Ankara kamp">Ankara kamp</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Ankara piknik">Ankara piknik</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Eymir Gölü">Eymir Gölü</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Beypazarı">Beypazarı</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Kızılcahamam">Kızılcahamam</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Anıtkabir">Anıtkabir</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="Ankara Kalesi">Ankara Kalesi</button>
-                        <button type="button" class="ankara-tag" data-ankara-term="baraj">Göller ve barajlar</button>
-                    </div>
-                </div>
-
-                <div id="ankaraGuideContent">
-                    <section class="ankara-cat-section" data-ankara-cat="videolar">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🎬 YouTuber'ların Gözünden Ankara</h3>
-                        </div>
-                        <p class="ankara-cat-desc">Ankara'nın en çok beğenilen gezi noktaları, sokak lezzetleri ve başkent yaşamı hakkında yerli ve yabancı içerikler.</p>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="ankara sokak lezzetlerini denedik mesut can tomay ali biçim aspava sokak yemekleri yerli video" data-tags="ankara sokak lezzetleri ali biçim mesut can tomay aspava dibek kahvesi dondurma">
-                                <div class="ankara-card-band band-videolar"></div>
-                                <div class="ankara-video-frame">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/x5yA9oW0nuI?rel=0" title="Ankara Sokak Lezzetlerini Denedik!" loading="lazy" allowfullscreen></iframe>
-                                </div>
-                                <div class="ankara-card-body">
-                                    <h4>Ankara Sokak Lezzetlerini Denedik!</h4>
-                                    <div class="ankara-card-meta">
-                                        <span class="ankara-meta-pill district">📺 Ali Biçim</span>
-                                        <span class="ankara-meta-pill">Yerli</span>
-                                        <span class="ankara-meta-pill views">👁️ ~2,9 Milyon</span>
-                                    </div>
-                                    <p class="ankara-card-text">Aspava, dondurma, dibek kahvesi ve başkent esnafı; Ankara'nın en sevilen sokak lezzetleri turu.</p>
-                                    <div class="ankara-card-action">
-                                        <a class="ankara-map-link" href="https://www.youtube.com/watch?v=x5yA9oW0nuI" target="_blank" rel="noopener">YouTube'da Aç ↗</a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="ankara-item-card" data-search="ankara gezilecek yerler mutlaka görmeniz gereken 76 yer gezilesiyer yerli video" data-tags="ankara gezilecek yerler gezilesiyer 76 yer anıtkabir kalesi başkent">
-                                <div class="ankara-card-band band-videolar"></div>
-                                <div class="ankara-video-frame">
-                                    <iframe src="https://www.youtube-nocookie.com/embed/W26vlJewSaU?rel=0" title="Ankara'da Gezilecek Yerler" loading="lazy" allowfullscreen></iframe>
-                                </div>
-                                <div class="ankara-card-body">
-                                    <h4>Ankara'da Gezilecek Yerler | Mutlaka Görmeniz Gereken 76 Yer!</h4>
-                                    <div class="ankara-card-meta">
-                                        <span class="ankara-meta-pill district">📺 gezilesiyer</span>
-                                        <span class="ankara-meta-pill">Yerli</span>
-                                        <span class="ankara-meta-pill views">👁️ ~154 Bin</span>
-                                    </div>
-                                    <p class="ankara-card-text">Ankara'nın popüler ve çok ziyaret edilen noktalarını tek videoda özetleyen kısa ama kapsamlı gezi rehberi.</p>
-                                    <div class="ankara-card-action">
-                                        <a class="ankara-map-link" href="https://www.youtube.com/watch?v=W26vlJewSaU" target="_blank" rel="noopener">YouTube'da Aç ↗</a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="tarihi">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🏛️ Tarihi ve Kültürel Yerler</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="anıtkabir atatürk ankara tarihi yer anıtkabir mobil ziyaret" data-tags="anıtkabir atatürk çankaya tarih monument ankara tarihi">
-                                <div class="ankara-card-band band-tarihi"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Anıtkabir</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Çankaya</span><span class="ankara-meta-pill">Tarih</span></div>
-                                    <p class="ankara-card-text">Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk'ün ebedi istirahatgahı; başkentin en önemli turistik mekânlarından biridir.</p>
-                                    <div class="ankara-card-action"><a class="ankara-map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=An%C4%B1tkabir%2C+Ankara">Haritada Gör ↗</a></div>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="ankara kalesi tarihi yer ankara kalesi görünüm" data-tags="ankara kalesi altındağ tarih kale ankara tarihi manzara">
-                                <div class="ankara-card-band band-tarihi"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Ankara Kalesi</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Altındağ</span><span class="ankara-meta-pill">Mimari</span></div>
-                                    <p class="ankara-card-text">Şehrin eski merkezini çevreleyen kale, Ankara'nın en eski ve en dikkat çeken tarihi yapılarından biridir.</p>
-                                    <div class="ankara-card-action"><a class="ankara-map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ankara+Kalesi%2C+Alt%C4%B1nda%C4%9F%2C+Ankara">Haritada Gör ↗</a></div>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="muze">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🖼️ Müzeler</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="anadolu medeniyetleri müzesi ankara müze" data-tags="anadolu medeniyetleri müzesi tepebaşı arkeoloji tarih müze ankara">
-                                <div class="ankara-card-band band-muze"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Anadolu Medeniyetleri Müzesi</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Tepebaşı</span><span class="ankara-meta-pill">Müze</span></div>
-                                    <p class="ankara-card-text">Anadolu'nun zengin tarihini, arkeolojik eserleri ve önemli medeniyet izlerini sergileyen önde gelen müzelerden biridir.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="mke silah sanayi müzesi ankara müze" data-tags="mke silah sanayi müzesi etimesgut savunma sanayi müze ankara">
-                                <div class="ankara-card-band band-muze"></div>
-                                <div class="ankara-card-body">
-                                    <h4>MKE Silah Sanayi Müzesi</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Etimesgut</span><span class="ankara-meta-pill">Sanayi</span></div>
-                                    <p class="ankara-card-text">Askeri üretim, tarih ve savunma sanayisiyle ilgili kapsamlı sergiler sunar.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="park">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🌳 Parklar ve Doğa Alanları</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="genclik parki ankara park">
-                                <div class="ankara-card-band band-park"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Gençlik Parkı</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Kızılay</span><span class="ankara-meta-pill">Park</span></div>
-                                    <p class="ankara-card-text">Şehrin merkezindeki en popüler yeşil alanlardan biri; yürüyüş ve dinlenme için idealdir.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="seğmenler parkı ankara park yeşil alan">
-                                <div class="ankara-card-band band-park"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Seğmenler Parkı</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Yenimahalle</span><span class="ankara-meta-pill">Park</span></div>
-                                    <p class="ankara-card-text">Aile gezileri, yürüyüş ve açık hava etkinlikleri için uygun, geniş bir doğa alanı.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="piknik">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🧺 Piknik ve Mesire Alanları</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="eymir gölü piknik ankara">
-                                <div class="ankara-card-band band-piknik"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Eymir Gölü</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Gölbaşı</span><span class="ankara-meta-pill">Piknik</span></div>
-                                    <p class="ankara-card-text">Gölün etrafındaki yeşil alanlar, manzara ve kuş gözlemi için Ankara'nın en sevilen piknik noktalarından biri.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="kızılcahamam piknik orman alanı ankara">
-                                <div class="ankara-card-band band-piknik"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Kızılcahamam Orman Alanları</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Kızılcahamam</span><span class="ankara-meta-pill">Doğa</span></div>
-                                    <p class="ankara-card-text">Piknik, yürüyüş ve kamp için ideal, serin ve yeşil bir bölge.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="kamp">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">⛺ Kamp Alanları</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="güdül kamp alanı ankara">
-                                <div class="ankara-card-band band-kamp"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Güdül Kamp Alanları</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Güdül</span><span class="ankara-meta-pill">Kamp</span></div>
-                                    <p class="ankara-card-text">Ormanla çevrili, sessiz ve temiz hava isteyen kamp severler için uygun bir rota.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="nallıhan kamp alanı ankara kuş cenneti">
-                                <div class="ankara-card-band band-kamp"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Nallıhan Kamp Alanları</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Nallıhan</span><span class="ankara-meta-pill">Doğa</span></div>
-                                    <p class="ankara-card-text">Kuş gözlemi, yayla havası ve kamp için uygun alanların bulunduğu bir gezi bölgesi.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="su">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🌊 Göller ve Barajlar</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="eymir gölü ankara göl">
-                                <div class="ankara-card-band band-su"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Eymir Gölü</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Gölbaşı</span><span class="ankara-meta-pill">Göl</span></div>
-                                    <p class="ankara-card-text">Manzarası, kuş gözlem alanları ve yürüyüş parkurlarıyla Ankara'nın en çok tercih edilen göllerinden biri.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="karaşar barajı ankara baraj">
-                                <div class="ankara-card-band band-su"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Karaşar Barajı</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Polatlı</span><span class="ankara-meta-pill">Baraj</span></div>
-                                    <p class="ankara-card-text">Doğa yürüyüşleri ve sessiz kamp deneyimi için ideal bir göl ve baraj alanı.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="ilce">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">🚗 İlçe Gezileri ve Günübirlik Rotalar</h3>
-                        </div>
-                        <div class="ankara-cards-grid">
-                            <article class="ankara-item-card" data-search="beypazarı ankara ilçe gezisi">
-                                <div class="ankara-card-band band-ilce"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Beypazarı</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Batı Ankara</span><span class="ankara-meta-pill">İlçe</span></div>
-                                    <p class="ankara-card-text">Taş evler, lezzetler ve doğal güzellikleriyle Ankara'nın en keyifli günübirlik rotalarından biri.</p>
-                                </div>
-                            </article>
-                            <article class="ankara-item-card" data-search="kızılcahamam çamlıdere ilçe rotası ankara">
-                                <div class="ankara-card-band band-ilce"></div>
-                                <div class="ankara-card-body">
-                                    <h4>Kızılcahamam &amp; Çamlıdere</h4>
-                                    <div class="ankara-card-meta"><span class="ankara-meta-pill district">📍 Kuzey Ankara</span><span class="ankara-meta-pill">Doğa</span></div>
-                                    <p class="ankara-card-text">Ormanlık alanlar, yaylalar ve serin hava sayesinde kısa süreli doğa turları için çok uygun.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="ankara-cat-section" data-ankara-cat="notlar">
-                        <div class="ankara-cat-header">
-                            <h3 class="ankara-cat-title">📌 Gezmeden Önce Bilmeniz Gerekenler</h3>
-                        </div>
-                        <div class="ankara-note-box">
-                            <ul class="ankara-note-list">
-                                <li><strong>Kamp ve piknik:</strong> Tabiat parkları ve milli parklarda giriş, kamp ve araç ücretleri ile ateş yakma kuralları mevsime göre değişir. Özellikle yaz aylarında orman yangını riski nedeniyle ormanlık alanlara giriş ve mangal yasağı uygulanabilir; gitmeden önce Doğa Koruma ve Milli Parklar ile valilik duyurularını kontrol edin.</li>
-                                <li><strong>Göller ve barajlar:</strong> İçme suyu sağlayan barajlarda (ör. Çamlıdere, Kurtboğazı, Eğrekkaya) yüzmek ve suya girmek yasaktır. Baraj kenarlarında kamp için yerel izinleri kontrol edin.</li>
-                                <li><strong>Müzeler:</strong> Çoğu müze pazartesi kapalıdır ya da yaz/kış saatleri farklıdır. Güncel saat ve ücretler için Müze Kart ve resmi siteleri kontrol edin.</li>
-                                <li><strong>Ulaşım:</strong> Merkezdeki yerlere metro, Ankaray ve EGO otobüsleriyle; Kızılcahamam, Beypazarı, Nallıhan gibi ilçelere ise araç ya da AŞTİ'den kalkan otobüslerle ulaşabilirsiniz.</li>
-                                <li><strong>En iyi mevsim:</strong> İlkbahar (Nisan-Haziran) ve sonbahar (Eylül-Ekim) doğa gezileri için idealdir. Kışın Elmadağ ve Kızılcahamam karlı manzaralar sunar.</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <section id="ankaraGuideSection" class="city-guide-wrapper" hidden aria-label="Ankara gezi rehberi">
+                <iframe class="city-guide-frame" src="./Ankara.html" title="Ankara Gezi Rehberi: Anıtkabir, müzeler, parklar, göller ve barajlar" loading="lazy"></iframe>
+            </section>
 
             <!-- Şehir Not Defteri -->
             <div class="notepad-section">
@@ -1216,6 +941,61 @@
 
 </div>
 
+<!-- ==================== SOHBET PANELİ (chat.css + chat.js) ==================== -->
+<div id="chatOverlay" class="chat-overlay"></div>
+<aside id="chatPanel" class="chat-panel" role="dialog" aria-labelledby="chatPanelTitle" aria-hidden="true">
+    <header class="chat-header">
+        <div class="chat-header-title">
+            <span aria-hidden="true">💬</span>
+            <div>
+                <h2 id="chatPanelTitle">Sohbet</h2>
+                <span class="chat-header-status">Gezi topluluğu</span>
+            </div>
+        </div>
+        <button type="button" id="chatCloseBtn" class="chat-icon-btn" aria-label="Sohbet panelini kapat" title="Kapat">✕</button>
+    </header>
+
+    <div id="chatNotice" class="chat-notice" hidden role="status"></div>
+
+    <!-- Giriş yapılmadan görünen ekran -->
+    <div id="chatAuthView" class="chat-auth-view">
+        <div class="chat-auth-card">
+            <div class="chat-auth-icon" aria-hidden="true">🔐</div>
+            <h3>Sohbete katılmak için giriş yapın</h3>
+            <p>Gezi rehberi okurlarıyla sohbet etmek için Google hesabınızla güvenli şekilde giriş yapın.</p>
+            <button type="button" id="chatGoogleBtn" class="chat-google-btn">
+                <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                </svg>
+                Google ile giriş yap
+            </button>
+            <small class="chat-auth-hint">Giriş, Supabase Auth üzerinden Google ile yapılır; şifreniz bu sitede saklanmaz.</small>
+        </div>
+    </div>
+
+    <!-- Giriş yapıldıktan sonra görünen sohbet odası -->
+    <div id="chatRoomView" class="chat-room-view" hidden>
+        <div class="chat-userbar">
+            <div id="chatUserAvatar" class="chat-avatar" aria-hidden="true"></div>
+            <div class="chat-userinfo">
+                <strong id="chatUserName">Kullanıcı</strong>
+                <span id="chatUserEmail"></span>
+            </div>
+            <button type="button" id="chatLogoutBtn" class="chat-logout-btn">Çıkış</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat-composer" autocomplete="off">
+            <textarea id="chatInput" rows="1" maxlength="1000" placeholder="Mesajınızı yazın… (Enter ile gönder)" aria-label="Mesaj yaz"></textarea>
+            <button type="submit" id="chatSendBtn" class="chat-send-btn" aria-label="Mesajı gönder" title="Gönder">➤</button>
+        </form>
+    </div>
+</aside>
+
 <!-- Veri Seti ve Uygulama Betikleri -->
 <script src="./provinces-data.js"></script>
 <script src="./app.js"></script>
@@ -1224,4 +1004,8 @@
 
 
 <script defer src="./city-video-slots.js"></script>
+
+<!-- Sohbet: Supabase istemcisi + sohbet mantığı (defer, sırayla çalışır) -->
+<script defer src="./vendor/supabase.min.js"></script>
+<script defer src="./chat.js"></script>
 </body></html>
